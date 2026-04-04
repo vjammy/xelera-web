@@ -1,5 +1,6 @@
 export const siteConfig = {
-  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://cal.com",
+  bookingUrl:
+    process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://cal.com/vivek-jamwal-hfu8xu",
 };
 
 export const navigationLinks = [
