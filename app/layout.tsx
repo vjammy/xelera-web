@@ -19,11 +19,11 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://xelera.ai"),
   title: {
-    default: "Xelera.ai | AI Systems That Convert Ambition Into Operating Advantage",
+    default: "Xelera.ai | AI That Ships Into Revenue, Operations, and Customer Workflows",
     template: "%s | Xelera.ai",
   },
   description:
-    "Xelera designs, deploys, and operationalizes AI systems for teams that need measurable business movement, governed workflows, and production-grade automation.",
+    "Xelera helps mid-sized businesses automate work, accelerate GTM, and deploy AI systems with measurable ROI, clear governance, and production-ready workflows.",
   applicationName: "Xelera.ai",
   keywords: [
     "AI strategy",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Xelera.ai",
     description:
-      "Design, deploy, and operationalize AI systems built to create customer value.",
+      "Automate work, accelerate GTM, and deploy AI systems with measurable ROI.",
     url: "https://xelera.ai",
     siteName: "Xelera.ai",
     images: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Xelera.ai",
     description:
-      "AI systems that move from strategy to production without losing clarity, governance, or speed.",
+      "AI that helps mid-sized businesses automate work, move faster, and deliver measurable ROI.",
     images: ["/opengraph-image"],
   },
 };

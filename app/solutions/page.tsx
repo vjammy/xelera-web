@@ -6,7 +6,7 @@ import { siteConfig, solutions } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Solutions",
-  description: "Explore Xelera solutions for AI strategy, agentic workflows, AI product delivery, and operational governance.",
+  description: "Explore Xelera solutions for AI automation, GTM acceleration, operational workflows, and measurable business ROI.",
 };
 
 export default function SolutionsPage() {
@@ -15,10 +15,10 @@ export default function SolutionsPage() {
       <FadeIn>
         <p className="section-kicker">Solutions</p>
         <div className="mt-4 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <h1 className="section-title">AI systems designed to move from pilot energy to operating leverage.</h1>
+          <h1 className="section-title">AI solutions built to improve revenue, operations, and customer workflows.</h1>
           <p className="section-copy">
-            Xelera packages strategy, delivery, governance, and adoption into focused solution
-            tracks so buyers can choose the right entry point without losing a bigger systems view.
+            Xelera packages strategy, workflow delivery, governance, and adoption into focused
+            solution tracks that help mid-sized businesses choose the right place to start.
           </p>
         </div>
       </FadeIn>

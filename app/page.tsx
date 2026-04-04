@@ -22,17 +22,17 @@ export default function Home() {
           <FadeIn className="flex max-w-2xl flex-col justify-center">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan-300/20 bg-white/5 px-4 py-2 text-[0.7rem] uppercase tracking-[0.3em] text-cyan-100/80">
               <Sparkles className="h-3.5 w-3.5" />
-              AI systems built to win customers
+              AI that actually ships into your business
             </div>
             <p className="mt-8 font-mono text-xs uppercase tracking-[0.35em] text-cyan-100/60">
-              Strategy. Deployment. Operating advantage.
+              Automate work. Accelerate GTM. Prove ROI.
             </p>
             <h1 className="mt-4 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-              Turn AI ambition into systems your customers can feel.
+              Deploy AI into real workflows without slowing the business down.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-              Xelera helps teams design, ship, and scale AI products, agentic workflows,
-              and decision systems without losing speed, trust, or business focus.
+              Xelera helps mid-sized businesses automate work, improve sales and service
+              workflows, and launch AI systems that deliver measurable business results.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -67,9 +67,9 @@ export default function Home() {
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
                   <p className="font-mono text-[0.65rem] uppercase tracking-[0.35em] text-cyan-100/60">
-                    Xelera Control Surface
+                    Xelera Revenue + Operations Map
                   </p>
-                  <p className="mt-2 text-xl font-medium text-white">Live AI operating map</p>
+                  <p className="mt-2 text-xl font-medium text-white">Live workflow impact snapshot</p>
                 </div>
                 <div className="flex gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
@@ -82,7 +82,7 @@ export default function Home() {
                 <div className="rounded-[1.5rem] border border-white/8 bg-white/5 p-5">
                   <div className="flex items-center justify-between">
                     <p className="font-mono text-[0.65rem] uppercase tracking-[0.3em] text-cyan-100/55">
-                      Workstream health
+                      ROI readiness
                     </p>
                     <Orbit className="h-4 w-4 text-cyan-200" />
                   </div>
@@ -113,28 +113,28 @@ export default function Home() {
                       <div className="rounded-2xl border border-white/8 bg-black/20 p-4">
                         <div className="flex items-center gap-3 text-white">
                           <Bot className="h-5 w-5 text-[var(--color-accent)]" />
-                          <span className="text-sm font-medium">Agentic customer workflows</span>
+                          <span className="text-sm font-medium">Revenue workflow automation</span>
                         </div>
                         <p className="mt-3 text-sm leading-6 text-slate-300">
-                          Connect discovery, delivery, and support into governed automation that
-                          keeps humans in the loop when the stakes are high.
+                          Speed up qualification, follow-up, routing, and customer response
+                          without adding more manual coordination.
                         </p>
                       </div>
                       <div className="rounded-2xl border border-white/8 bg-black/20 p-4">
                         <div className="flex items-center gap-3 text-white">
                           <ShieldCheck className="h-5 w-5 text-cyan-200" />
-                          <span className="text-sm font-medium">Governance from day one</span>
+                          <span className="text-sm font-medium">Secure rollout from day one</span>
                         </div>
                         <p className="mt-3 text-sm leading-6 text-slate-300">
-                          Risk controls, role boundaries, and evaluation layers are designed into
-                          the operating model instead of retrofitted later.
+                          Give leadership confidence with review points, permissions, and
+                          evaluation built into the delivery plan.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(23,36,57,0.95),rgba(11,17,26,0.95))] p-5">
                     <p className="font-mono text-[0.65rem] uppercase tracking-[0.3em] text-cyan-100/55">
-                      Delivery arc
+                      Delivery path
                     </p>
                     <div className="mt-4 flex items-center gap-3 text-sm text-slate-300">
                       <span className="rounded-full border border-white/10 px-3 py-1">Map</span>
@@ -156,12 +156,12 @@ export default function Home() {
           <p className="section-kicker">What Xelera does</p>
           <div className="mt-4 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <h2 className="section-title">
-              Build the AI layer that actually changes the way your business operates.
+              Apply AI where it creates visible gains in revenue, operations, and customer experience.
             </h2>
             <p className="section-copy">
-              We help teams choose the right opportunities, design the operating model, and ship
-              production-ready AI that improves customer experience, internal throughput, and
-              decision quality.
+              We help teams find the right use cases, launch production-ready workflows, and
+              measure the business impact so AI becomes a practical growth lever instead of an
+              expensive side project.
             </p>
           </div>
         </FadeIn>
@@ -217,7 +217,7 @@ export default function Home() {
           <FadeIn>
             <p className="section-kicker">How we work</p>
             <h2 className="section-title mt-4">
-              Xelera closes the gap between the AI roadmap and the operating model.
+              Xelera helps you move from AI interest to deployed workflows with business accountability.
             </h2>
           </FadeIn>
           <div className="grid gap-5">
@@ -244,9 +244,9 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
           <FadeIn>
             <p className="section-kicker">Start the conversation</p>
-            <h2 className="section-title mt-4">Bring us the problem, the ambition, or the bottleneck.</h2>
+            <h2 className="section-title mt-4">Bring us the workflow, bottleneck, or growth target you want to improve.</h2>
             <p className="section-copy mt-6">
-              Every submission routes into Xelera’s lead workflow so the team can respond quickly,
+              Every submission routes into Xelera&apos;s lead workflow so the team can respond quickly,
               qualify the opportunity, and move you toward the right next step.
             </p>
             <div className="mt-10 grid gap-4">

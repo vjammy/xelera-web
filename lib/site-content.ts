@@ -10,41 +10,41 @@ export const navigationLinks = [
 ];
 
 export const homeProofItems = [
-  { value: "AI-ready", label: "Built for teams moving from experimentation to production" },
-  { value: "Human-guided", label: "Operational controls and role-aware workflows" },
-  { value: "Customer-led", label: "Designed to improve buyer experience and revenue motion" },
+  { value: "ROI-led", label: "Focused on workflows tied to revenue, cost, and response speed" },
+  { value: "Secure rollout", label: "Governed delivery with review points and human control" },
+  { value: "Mid-market fit", label: "Built for practical operators, not innovation theater" },
 ];
 
 export const homeSignalItems = [
-  { label: "Opportunity mapping", value: "92%", progress: "92%" },
-  { label: "Workflow readiness", value: "84%", progress: "84%" },
-  { label: "Governance coverage", value: "88%", progress: "88%" },
+  { label: "Revenue use-case fit", value: "92%", progress: "92%" },
+  { label: "Operational readiness", value: "84%", progress: "84%" },
+  { label: "Risk control coverage", value: "88%", progress: "88%" },
 ];
 
 export const homeCapabilityCards = [
   {
     icon: "brain",
-    title: "AI strategy that stays close to the business",
-    copy: "Identify the customer journeys, team workflows, and decision surfaces where AI can create real advantage instead of shallow novelty.",
-    tagline: "Opportunity mapping",
+    title: "Find the AI use cases worth funding",
+    copy: "Prioritize the workflows where automation, copilots, or AI decision support can create visible gains in speed, conversion, service, or margin.",
+    tagline: "ROI-focused roadmap",
   },
   {
     icon: "bot",
-    title: "Agentic workflows built for production pressure",
-    copy: "Design copilots, assistants, and orchestration layers that connect humans, data, and actions without sacrificing control.",
-    tagline: "Workflow automation",
+    title: "Automate revenue and operations workflows",
+    copy: "Launch AI-driven workflows that improve lead handling, internal coordination, customer response, and recurring operational tasks.",
+    tagline: "Workflow deployment",
   },
   {
     icon: "shield",
-    title: "Governance, evaluation, and rollout discipline",
-    copy: "Ship with guardrails, ownership boundaries, and evaluation loops that keep the system trustworthy as it grows.",
-    tagline: "Operational trust",
+    title: "Deploy with control, security, and accountability",
+    copy: "Put guardrails, review steps, permissions, and measurement in place so leadership can trust the rollout from day one.",
+    tagline: "Risk-managed delivery",
   },
   {
     icon: "orbit",
-    title: "Adoption systems that create momentum after launch",
-    copy: "Turn pilots into repeatable operating patterns with enablement, measurement, and a roadmap for the next layer of value.",
-    tagline: "Scale and adoption",
+    title: "Scale what works after the first win",
+    copy: "Turn an initial launch into repeatable business value with adoption support, iteration plans, and a pipeline of next-step opportunities.",
+    tagline: "Expansion and adoption",
   },
 ];
 
@@ -52,10 +52,10 @@ export const workloadFitOptions = [
   {
     id: "revenue",
     label: "Revenue teams",
-    kicker: "Buyer-facing systems",
-    title: "Improve how prospects discover, evaluate, and move.",
+    kicker: "Buyer-facing workflows",
+    title: "Improve how leads are qualified, routed, and converted.",
     description:
-      "Use AI to shorten response times, strengthen qualification, surface insight faster, and give commercial teams better context at the moment of action.",
+      "Use AI to reduce response time, improve qualification quality, and give revenue teams better context at the moment a buyer needs an answer.",
     outcomes: [
       "Faster lead qualification",
       "Better handoff across sales and delivery",
@@ -67,9 +67,9 @@ export const workloadFitOptions = [
     id: "operations",
     label: "Operations leaders",
     kicker: "Internal operating leverage",
-    title: "Reduce the drag inside recurring workflows.",
+    title: "Reduce the drag inside repetitive business processes.",
     description:
-      "Automate repetitive decision support, structure knowledge, and create guided AI workflows that free teams to focus on high-value work.",
+      "Automate repetitive work, organize scattered knowledge, and create guided AI workflows that free teams to focus on customers and execution.",
     outcomes: [
       "Less manual coordination",
       "Better process consistency",
@@ -81,7 +81,7 @@ export const workloadFitOptions = [
     id: "product",
     label: "Product owners",
     kicker: "Productized AI experiences",
-    title: "Bring AI into the product without losing clarity or trust.",
+    title: "Bring AI into the product without confusing users or adding risk.",
     description:
       "Shape features, evaluation, and delivery patterns so customer-facing AI feels useful, understandable, and commercially durable.",
     outcomes: [
@@ -95,9 +95,9 @@ export const workloadFitOptions = [
     id: "executive",
     label: "Executive sponsors",
     kicker: "Portfolio-level orchestration",
-    title: "Turn scattered AI efforts into a coherent operating program.",
+    title: "Turn scattered AI efforts into a focused business program.",
     description:
-      "Align leadership, business cases, and delivery sequencing so the organization invests in the right AI moves and knows how to scale them.",
+      "Align leadership, business cases, and delivery sequencing so the company invests in the right use cases and knows how to scale them responsibly.",
     outcomes: [
       "Stronger investment prioritization",
       "Better cross-team alignment",
@@ -109,66 +109,66 @@ export const workloadFitOptions = [
 
 export const processSteps = [
   {
-    title: "Frame the business move",
-    copy: "We map the customer problem, internal workflow, and target outcome so the AI strategy starts from a real operating lever.",
+    title: "Pick the workflow that matters most",
+    copy: "We identify the business bottleneck, customer friction point, or manual process where AI can create visible improvement fast.",
   },
   {
-    title: "Design the system around trust and action",
-    copy: "Interfaces, automations, human review points, and data touchpoints are designed together so the solution fits production reality.",
+    title: "Design the workflow around real operating needs",
+    copy: "Interfaces, automations, review points, and handoffs are designed together so the solution fits how your teams already work.",
   },
   {
-    title: "Launch with governance built in",
-    copy: "We implement the workflow, measurement plan, and operating controls needed to deploy with confidence and learn quickly.",
+    title: "Launch with measurement and controls in place",
+    copy: "We implement the workflow, rollout plan, and success metrics needed to deploy with confidence and learn quickly.",
   },
   {
-    title: "Expand what works",
-    copy: "Once the first system proves itself, Xelera helps turn that momentum into a roadmap for broader customer and operational value.",
+    title: "Expand the wins that prove ROI",
+    copy: "Once the first workflow performs, Xelera helps turn that result into a roadmap for broader revenue and operational impact.",
   },
 ];
 
 export const solutions = [
   {
     eyebrow: "Strategic advisory",
-    title: "AI roadmap and opportunity design",
+    title: "AI roadmap tied to business ROI",
     description:
-      "Define where AI should create leverage, what the first high-value use cases are, and how to sequence delivery around real business goals.",
+      "Define where AI should create measurable value first, what the highest-impact workflows are, and how to sequence delivery around real business goals.",
     highlights: [
-      "Executive alignment and prioritization",
-      "Use-case discovery tied to measurable outcomes",
-      "Operating model recommendations",
+      "Executive alignment around business outcomes",
+      "Use-case prioritization tied to ROI",
+      "Practical rollout recommendations",
     ],
   },
   {
-    eyebrow: "Product and workflow delivery",
-    title: "Agentic workflows and customer-facing AI",
+    eyebrow: "Workflow delivery",
+    title: "AI automation for sales, service, and operations",
     description:
-      "Ship assistants, copilots, and orchestration layers that connect context to action across internal and external experiences.",
+      "Deploy assistants, copilots, and workflow automation that reduce manual effort and improve responsiveness across customer and internal teams.",
     highlights: [
-      "User journey and workflow design",
-      "Prompting, orchestration, and evaluation patterns",
-      "Launch support from pilot through production",
+      "Workflow design tied to team adoption",
+      "Automation, prompting, and orchestration",
+      "Launch support from pilot to production",
     ],
   },
   {
     eyebrow: "Governance and measurement",
-    title: "AI controls, evaluation, and operating trust",
+    title: "AI controls, measurement, and rollout trust",
     description:
-      "Create the guardrails, testing loops, and accountability structure needed to scale AI confidently inside real organizations.",
+      "Create the guardrails, testing loops, and accountability structure needed to scale AI confidently inside a growing business.",
     highlights: [
       "Review and approval checkpoints",
-      "Measurement plans for adoption and quality",
-      "Governance patterns that fit the business",
+      "Measurement plans for ROI and adoption",
+      "Governance patterns that fit the company",
     ],
   },
   {
     eyebrow: "Scale",
-    title: "Adoption systems and next-phase expansion",
+    title: "Adoption support and next-phase expansion",
     description:
-      "Convert a good first launch into a durable capability with enablement, iteration, and a path toward broader organizational value.",
+      "Convert a strong first launch into a durable capability with enablement, iteration, and a path toward broader business value.",
     highlights: [
       "Post-launch optimization",
       "Team enablement and adoption support",
-      "Roadmapping for the next AI layer",
+      "Roadmapping for the next ROI-driven use case",
     ],
   },
 ];
@@ -178,28 +178,28 @@ export const industries = [
     kicker: "Commercial teams",
     title: "Growth, sales, and customer experience",
     description:
-      "When revenue teams need better qualification, smarter follow-up, and more responsive buyer journeys, Xelera shapes the workflow around speed and trust.",
+      "When revenue teams need better qualification, faster follow-up, and more responsive buyer journeys, Xelera shapes the workflow around speed and measurable impact.",
     examples: ["Lead qualification", "Proposal assistance", "Knowledge capture", "Response acceleration"],
   },
   {
     kicker: "Operations",
     title: "Workflow-heavy internal functions",
     description:
-      "Operations teams often have clear bottlenecks but fragmented systems. Xelera uses AI to reduce coordination overhead and improve consistency.",
+      "Operations teams often have clear bottlenecks but fragmented systems. Xelera uses AI to reduce coordination overhead, speed up execution, and improve consistency.",
     examples: ["Internal copilots", "Policy guidance", "Operational triage", "Knowledge routing"],
   },
   {
     kicker: "Product and platform",
     title: "Digital products with AI features",
     description:
-      "For product teams embedding AI into the customer experience, we help balance capability, usability, evaluation, and release discipline.",
+      "For product teams embedding AI into the customer experience, we help balance capability, usability, evaluation, and commercial discipline.",
     examples: ["Embedded assistants", "Feature prototyping", "Release evaluation", "Governed rollout"],
   },
   {
     kicker: "Regulated and high-trust environments",
     title: "Organizations where risk and clarity matter",
     description:
-      "In high-trust settings, AI needs stronger review layers, clearer ownership, and tighter operating controls. That is built into the delivery path from the start.",
+      "In high-trust settings, AI needs stronger review layers, clearer ownership, and tighter operating controls. That gets built into the delivery path from the start.",
     examples: ["Human review points", "Decision logging", "Guardrail design", "Escalation flows"],
   },
 ];
