@@ -26,16 +26,16 @@ export default function IndustriesPage() {
           <FadeIn
             key={industry.title}
             delay={index * 0.08}
-            className="blue-panel rounded-[1.75rem] p-7"
+            className="white-panel rounded-[1.75rem] p-7"
           >
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-blue-100/60">{industry.kicker}</p>
-            <h2 className="mt-4 text-2xl font-medium text-white">{industry.title}</h2>
-            <p className="mt-4 text-base leading-7 text-slate-300">{industry.description}</p>
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">{industry.kicker}</p>
+            <h2 className="mt-4 text-2xl font-medium text-slate-950">{industry.title}</h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">{industry.description}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               {industry.examples.map((example) => (
                 <span
                   key={example}
-                  className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-sm text-slate-300"
+                  className="white-chip rounded-full px-3 py-1.5 text-sm text-slate-600"
                 >
                   {example}
                 </span>

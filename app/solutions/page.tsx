@@ -28,16 +28,16 @@ export default function SolutionsPage() {
           <FadeIn
             key={solution.title}
             delay={index * 0.08}
-            className="blue-panel grid gap-6 rounded-[1.75rem] p-7 lg:grid-cols-[0.55fr_0.45fr]"
+            className="white-panel grid gap-6 rounded-[1.75rem] p-7 lg:grid-cols-[0.55fr_0.45fr]"
           >
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.28em] text-blue-100/60">{solution.eyebrow}</p>
-              <h2 className="mt-4 text-3xl font-medium text-white">{solution.title}</h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">{solution.description}</p>
+              <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">{solution.eyebrow}</p>
+              <h2 className="mt-4 text-3xl font-medium text-slate-950">{solution.title}</h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">{solution.description}</p>
             </div>
             <div className="space-y-3">
               {solution.highlights.map((highlight) => (
-                <div key={highlight} className="rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-slate-300">
+                <div key={highlight} className="white-chip rounded-2xl px-4 py-3 text-sm text-slate-600">
                   {highlight}
                 </div>
               ))}
@@ -46,11 +46,11 @@ export default function SolutionsPage() {
         ))}
       </div>
 
-      <FadeIn delay={0.15} className="blue-panel mt-16 rounded-[2rem] p-8">
+      <FadeIn delay={0.15} className="white-panel mt-16 rounded-[2rem] p-8">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-kicker">Next step</p>
-            <h2 className="mt-4 text-3xl font-medium text-white">Need help choosing the right starting point?</h2>
+            <h2 className="mt-4 text-3xl font-medium text-slate-950">Need help choosing the right starting point?</h2>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/contact" className="button-primary">

@@ -99,7 +99,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="blue-panel rounded-[2rem] p-6 sm:p-8">
+    <div className="white-panel rounded-[2rem] p-6 sm:p-8">
       <form
         className="grid gap-5"
         onSubmit={handleSubmit}
@@ -147,14 +147,14 @@ export function ContactForm() {
         </div>
 
         <label className="grid gap-2">
-          <span className="text-sm font-medium text-slate-200">Area of interest</span>
+          <span className="text-sm font-medium text-slate-700">Area of interest</span>
           <select
             value={formState.interest}
             onChange={(event) => updateField("interest", event.target.value)}
             className="input-shell"
           >
             {contactInterestOptions.map((option) => (
-              <option key={option} value={option} className="bg-slate-950 text-white">
+              <option key={option} value={option}>
                 {option}
               </option>
             ))}
@@ -162,7 +162,7 @@ export function ContactForm() {
         </label>
 
         <label className="grid gap-2">
-          <span className="text-sm font-medium text-slate-200">What should we know?</span>
+          <span className="text-sm font-medium text-slate-700">What should we know?</span>
           <textarea
             value={formState.message}
             onChange={(event) => updateField("message", event.target.value)}
@@ -171,7 +171,7 @@ export function ContactForm() {
           />
         </label>
 
-        <div className="flex flex-col gap-4 border-t border-white/8 pt-5">
+        <div className="flex flex-col gap-4 border-t border-slate-900/8 pt-5">
           <button
             type="submit"
             disabled={submitDisabled || isPending}
@@ -180,7 +180,7 @@ export function ContactForm() {
             {isPending ? "Sending..." : "Request a Demo"}
             <ArrowRight className="h-4 w-4" />
           </button>
-          <p className="text-sm leading-6 text-slate-400">
+          <p className="text-sm leading-6 text-slate-500">
             Submission triggers an internal alert, a confirmation email, CRM logging, and a booking
             handoff.
           </p>
@@ -191,8 +191,8 @@ export function ContactForm() {
         <div
           className={`mt-5 rounded-2xl border px-4 py-4 text-sm leading-6 ${
             status.type === "success"
-              ? "border-blue-300/20 bg-blue-400/10 text-blue-50"
-              : "border-rose-400/20 bg-rose-400/10 text-rose-100"
+              ? "border-blue-300/30 bg-blue-50 text-blue-950"
+              : "border-rose-300/40 bg-rose-50 text-rose-900"
           }`}
         >
           <div className="flex items-start gap-3">
@@ -204,7 +204,7 @@ export function ContactForm() {
                   href={siteConfig.bookingUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-2 inline-flex items-center gap-2 font-semibold text-blue-200"
+                  className="mt-2 inline-flex items-center gap-2 font-semibold text-[var(--color-accent-strong)]"
                   onClick={() => trackEvent("booking_click", { location: "contact_form_success" })}
                 >
                   Book a 30-minute AI workflow review
@@ -234,7 +234,7 @@ function Field({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm font-medium text-slate-200">{label}</span>
+      <span className="text-sm font-medium text-slate-700">{label}</span>
       <input
         type={type}
         value={value}

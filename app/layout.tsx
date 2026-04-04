@@ -70,7 +70,7 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[var(--color-ink)] text-[var(--color-cloud)]">
+      <body className="min-h-full bg-[var(--background)] text-[var(--foreground)]">
         <Analytics />
         <div className="relative flex min-h-full flex-col overflow-x-clip">
           <SiteHeader />

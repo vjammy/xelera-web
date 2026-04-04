@@ -19,8 +19,8 @@ export default function ContactPage() {
             Whether you need strategic alignment, a faster path to deployment, or a more durable
             AI operating model, Xelera can help shape the right next move.
           </p>
-          <div className="blue-panel-soft mt-8 rounded-[1.75rem] p-6">
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-blue-100/60">
+          <div className="white-panel mt-8 rounded-[1.75rem] p-6">
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
               Prefer live scheduling?
             </p>
             <a

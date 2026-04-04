@@ -27,13 +27,13 @@ export default function AboutPage() {
           <FadeIn
             key={principle.title}
             delay={index * 0.08}
-            className="blue-panel rounded-[1.75rem] p-7"
+            className="white-panel rounded-[1.75rem] p-7"
           >
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-blue-100/60">
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
               Principle {index + 1}
             </p>
-            <h2 className="mt-4 text-2xl font-medium text-white">{principle.title}</h2>
-            <p className="mt-4 text-base leading-7 text-slate-300">{principle.description}</p>
+            <h2 className="mt-4 text-2xl font-medium text-slate-950">{principle.title}</h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">{principle.description}</p>
           </FadeIn>
         ))}
       </div>

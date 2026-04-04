@@ -5,9 +5,15 @@ type BrandLockupProps = {
   compact?: boolean;
   href?: string;
   onClick?: () => void;
+  inverted?: boolean;
 };
 
-export function BrandLockup({ compact = false, href = "/", onClick }: BrandLockupProps) {
+export function BrandLockup({
+  compact = false,
+  href = "/",
+  onClick,
+  inverted = false,
+}: BrandLockupProps) {
   return (
     <Link href={href} className="flex items-center gap-3" onClick={onClick}>
       <Image
@@ -22,14 +28,14 @@ export function BrandLockup({ compact = false, href = "/", onClick }: BrandLocku
         <div
           className={
             compact
-              ? "text-[1.5rem] font-semibold tracking-[-0.05em] text-white"
-              : "text-[1.85rem] font-semibold tracking-[-0.05em] text-white"
+              ? `text-[1.5rem] font-semibold tracking-[-0.05em] ${inverted ? "text-white" : "text-slate-950"}`
+              : `text-[1.85rem] font-semibold tracking-[-0.05em] ${inverted ? "text-white" : "text-slate-950"}`
           }
         >
           Xelera.ai
         </div>
         {!compact ? (
-          <div className="-mt-0.5 text-sm text-slate-300">
+          <div className={`-mt-0.5 text-sm ${inverted ? "text-slate-300" : "text-slate-600"}`}>
             AI systems for growth and operational clarity
           </div>
         ) : null}

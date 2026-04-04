@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07101f;
-  --foreground: #e8efff;
-  --color-ink: #07101f;
-  --color-ink-soft: #0d1b35;
-  --color-cloud: #edf4ff;
-  --color-paper: rgba(11, 27, 55, 0.86);
-  --color-paper-soft: rgba(20, 42, 79, 0.76);
-  --color-body: #a8b8d8;
-  --color-heading: #f6f9ff;
+  --background: #f7f9fc;
+  --foreground: #132238;
+  --color-ink: #132238;
+  --color-ink-soft: #243854;
+  --color-cloud: #f7fbff;
+  --color-paper: #ffffff;
+  --color-paper-soft: #eef3fb;
+  --color-body: #60708a;
+  --color-heading: #132238;
   --color-accent: #4f7cff;
   --color-accent-strong: #2f5cff;
   --color-accent-soft: #8bb6ff;
-  --color-border: rgba(159, 187, 255, 0.18);
+  --color-border: rgba(19, 34, 56, 0.1);
 }
 
 @theme inline {
@@ -32,10 +32,7 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(circle at top left, rgba(79, 124, 255, 0.16), transparent 28%),
-    radial-gradient(circle at 85% 18%, rgba(115, 169, 255, 0.15), transparent 24%),
-    linear-gradient(180deg, #07101f 0%, #081426 28%, #0a1730 60%, #07111f 100%);
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 32%, #f8fbff 100%);
   color: var(--foreground);
   font-family: var(--font-space-grotesk), sans-serif;
 }
@@ -57,8 +54,8 @@ button {
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(157, 186, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(157, 186, 255, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 88px 88px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 92%);
 }
@@ -75,7 +72,7 @@ button {
   font-size: 0.72rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(150, 182, 255, 0.72);
+  color: rgba(76, 108, 164, 0.72);
 }
 
 .section-title {
@@ -117,28 +114,26 @@ button {
   justify-content: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(149, 183, 255, 0.2);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(19, 34, 56, 0.1);
+  background: rgba(255, 255, 255, 0.9);
   padding: 0.85rem 1.4rem;
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--color-cloud);
-  backdrop-filter: blur(14px);
+  color: var(--color-heading);
 }
 
 .button-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(238, 243, 251, 1);
 }
 
 .input-shell {
   width: 100%;
   border-radius: 1.1rem;
-  border: 1px solid rgba(149, 183, 255, 0.16);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(19, 34, 56, 0.1);
+  background: rgba(255, 255, 255, 0.96);
   padding: 0.95rem 1rem;
   color: var(--color-heading);
   outline: none;
-  backdrop-filter: blur(14px);
 }
 
 .input-shell::placeholder {
@@ -151,21 +146,30 @@ button {
 }
 
 .blue-panel {
-  border: 1px solid rgba(149, 183, 255, 0.14);
-  background:
-    linear-gradient(180deg, rgba(13, 27, 53, 0.82), rgba(10, 21, 40, 0.9));
-  box-shadow: 0 24px 100px -60px rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(25, 52, 103, 0.98), rgba(19, 37, 72, 0.98));
+  box-shadow: 0 36px 90px -52px rgba(25, 52, 103, 0.65);
 }
 
 .blue-panel-soft {
-  border: 1px solid rgba(149, 183, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(14px);
+  border: 1px solid rgba(19, 34, 56, 0.08);
+  background: #ffffff;
+  box-shadow: 0 24px 80px -58px rgba(19, 34, 56, 0.22);
 }
 
 .blue-divider {
-  border-color: rgba(149, 183, 255, 0.14);
+  border-color: rgba(19, 34, 56, 0.08);
+}
+
+.white-panel {
+  border: 1px solid rgba(19, 34, 56, 0.08);
+  background: #ffffff;
+  box-shadow: 0 24px 80px -58px rgba(19, 34, 56, 0.2);
+}
+
+.white-chip {
+  border: 1px solid rgba(19, 34, 56, 0.08);
+  background: #f3f7fd;
 }
 
 @media (min-width: 640px) {
