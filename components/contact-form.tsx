@@ -69,10 +69,13 @@ export function ContactForm() {
         const result = (await response.json()) as {
           ok: boolean;
           error?: string;
+          bookingUrl?: string;
         };
 
         if (!response.ok || !result.ok) {
-          throw new Error(result.error ?? "We could not submit the form.");
+          const error = new Error(result.error ?? "We could not submit the form.");
+          (error as Error & { bookingUrl?: string }).bookingUrl = result.bookingUrl;
+          throw error;
         }
 
         trackEvent("form_submitted", {
@@ -181,8 +184,8 @@ export function ContactForm() {
             <ArrowRight className="h-4 w-4" />
           </button>
           <p className="text-sm leading-6 text-slate-500">
-            Submission triggers an internal alert, a confirmation email, CRM logging, and a booking
-            handoff.
+            Use the form for a written brief, or book directly below for the fastest path to a
+            conversation.
           </p>
         </div>
       </form>
@@ -192,7 +195,7 @@ export function ContactForm() {
           className={`mt-5 rounded-2xl border px-4 py-4 text-sm leading-6 ${
             status.type === "success"
               ? "border-blue-300/30 bg-blue-50 text-blue-950"
-              : "border-rose-300/40 bg-rose-50 text-rose-900"
+              : "border-amber-300/40 bg-amber-50 text-amber-900"
           }`}
         >
           <div className="flex items-start gap-3">
@@ -210,7 +213,18 @@ export function ContactForm() {
                   Book a 30-minute AI workflow review
                   <ArrowRight className="h-4 w-4" />
                 </a>
-              ) : null}
+              ) : (
+                <a
+                  href={siteConfig.bookingUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 inline-flex items-center gap-2 font-semibold text-[var(--color-accent-strong)]"
+                  onClick={() => trackEvent("booking_click", { location: "contact_form_error" })}
+                >
+                  Book a discovery call instead
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              )}
             </div>
           </div>
         </div>

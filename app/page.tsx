@@ -1,16 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, Bot, BrainCircuit, Orbit, ShieldCheck } from "lucide-react";
-import { ContactForm } from "@/components/contact-form";
+import { Bot, BrainCircuit, Orbit, ShieldCheck } from "lucide-react";
+import { CalInlineEmbed } from "@/components/cal-inline-embed";
 import { FadeIn } from "@/components/fade-in";
-import { WorkloadFit } from "@/components/workload-fit";
 import {
   featuredCaseStudy,
   homeCapabilityCards,
-  homeProofItems,
-  processSteps,
   roiProofBlocks,
   siteConfig,
 } from "@/lib/site-content";
+
+const primaryCards = homeCapabilityCards.slice(0, 3);
 
 export default function Home() {
   return (
@@ -19,17 +18,17 @@ export default function Home() {
         <div className="blue-panel relative overflow-hidden rounded-[2.5rem] px-7 py-12 sm:px-10 lg:px-14 lg:py-16">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(164,196,255,0.26),transparent_20%),radial-gradient(circle_at_18%_76%,rgba(99,138,255,0.18),transparent_24%)]" />
           <div className="grid-pattern absolute inset-0 opacity-35" />
-          <div className="relative grid gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(360px,1.08fr)] lg:items-center">
+          <div className="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.92fr)] lg:items-center">
             <FadeIn className="max-w-2xl">
               <p className="inline-flex w-fit rounded-full border border-white/12 bg-white/8 px-4 py-2 font-mono text-[0.72rem] uppercase tracking-[0.3em] text-blue-100/90">
                 AI that actually ships into your business
               </p>
-              <h1 className="mt-6 max-w-[11ch] text-5xl font-semibold leading-[0.94] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
-                Practical AI systems for teams that need real movement.
+              <h1 className="mt-6 max-w-[10ch] text-5xl font-semibold leading-[0.94] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+                Build useful AI systems without slowing the business down.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-200 sm:text-xl">
-                Xelera helps mid-sized businesses automate work, improve customer workflows, and
-                build AI systems with clearer delivery discipline.
+                Xelera helps mid-sized teams find the right AI use case, build the workflow, and
+                launch it with real operational discipline.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
@@ -40,8 +39,8 @@ export default function Home() {
                 >
                   Book a Discovery Call
                 </a>
-                <Link href="/solutions" className="button-secondary">
-                  Explore Solutions
+                <Link href="/contact" className="button-secondary">
+                  Send a Project Brief
                 </Link>
               </div>
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-200">
@@ -51,38 +50,21 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.12} className="lg:justify-self-end">
+            <FadeIn delay={0.12}>
               <div className="rounded-[2rem] border border-white/12 bg-white/8 p-6 backdrop-blur">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-[1.5rem] border border-white/10 bg-[rgba(7,16,31,0.24)] p-5">
-                    <p className="font-mono text-[0.68rem] uppercase tracking-[0.28em] text-blue-100/70">
-                      What Xelera focuses on
-                    </p>
-                    <div className="mt-5 space-y-4">
-                      {homeProofItems.map((item) => (
-                        <div key={item.label}>
-                          <p className="text-lg font-semibold text-white">{item.value}</p>
-                          <p className="mt-1 text-sm leading-6 text-slate-300">{item.label}</p>
-                        </div>
-                      ))}
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.28em] text-blue-100/70">
+                  What we help build
+                </p>
+                <div className="mt-5 space-y-3">
+                  {roiProofBlocks.map((item) => (
+                    <div
+                      key={item.label}
+                      className="rounded-2xl border border-white/10 bg-[rgba(7,16,31,0.24)] px-4 py-4"
+                    >
+                      <p className="text-base font-semibold text-white">{item.label}</p>
+                      <p className="mt-2 text-sm leading-6 text-slate-300">{item.detail}</p>
                     </div>
-                  </div>
-                  <div className="rounded-[1.5rem] border border-white/10 bg-[rgba(7,16,31,0.24)] p-5">
-                    <p className="font-mono text-[0.68rem] uppercase tracking-[0.28em] text-blue-100/70">
-                      Built to help with
-                    </p>
-                    <div className="mt-5 space-y-3">
-                      {roiProofBlocks.map((item) => (
-                        <div
-                          key={item.label}
-                          className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3"
-                        >
-                          <p className="text-sm font-semibold text-white">{item.label}</p>
-                          <p className="mt-1 text-sm leading-6 text-slate-300">{item.detail}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </FadeIn>
@@ -92,22 +74,22 @@ export default function Home() {
 
       <section className="section-shell pt-8">
         <FadeIn>
-          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
-              <p className="section-kicker">What Xelera does</p>
+              <p className="section-kicker">How Xelera helps</p>
               <h2 className="section-title mt-4 max-w-[12ch]">
-                Build the workflows that make AI useful to the business.
+                Pick the right workflow. Build it well. Launch it with confidence.
               </h2>
             </div>
             <p className="section-copy">
-              We help teams pick the right use cases, design the workflow around real operations,
-              and launch with the controls and visibility leadership needs.
+              The site should explain the offer quickly. These are the three jobs Xelera is here to
+              do for teams that want AI to create real business movement.
             </p>
           </div>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {homeCapabilityCards.map((card, index) => (
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {primaryCards.map((card, index) => (
             <FadeIn key={card.title} delay={index * 0.08} className="white-panel rounded-[1.85rem] p-7">
               <div className="inline-flex rounded-full border border-slate-900/8 bg-[var(--color-paper-soft)] p-3 text-[var(--color-accent-strong)]">
                 {card.icon === "brain" ? (
@@ -130,23 +112,14 @@ export default function Home() {
       <section className="section-shell border-y blue-divider bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)]">
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
           <FadeIn>
-            <p className="section-kicker">Representative project</p>
+            <p className="section-kicker">Representative build</p>
             <h2 className="section-title mt-4 max-w-[13ch]">
-              A stronger way to explain what Xelera can build next.
+              A clearer example of the kind of project Xelera is building.
             </h2>
             <p className="section-copy mt-6">
-              Since we are early, this section works best as a concrete project spotlight rather
-              than a fabricated customer success story.
+              We do not need to invent client outcomes. A concrete build example is more honest and
+              more useful for buyers evaluating fit.
             </p>
-            <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent-strong)]"
-            >
-              Book a Discovery Call
-              <ArrowRight className="h-4 w-4" />
-            </a>
           </FadeIn>
 
           <FadeIn delay={0.08} className="white-panel rounded-[2rem] p-8">
@@ -169,83 +142,35 @@ export default function Home() {
       </section>
 
       <section className="section-shell">
-        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr]">
+        <div className="grid gap-10 lg:grid-cols-[0.84fr_1.16fr]">
           <FadeIn>
-            <p className="section-kicker">Find your path</p>
-            <h2 className="section-title mt-4 max-w-[13ch]">
-              Different teams start in different places. The operating logic should still be clear.
+            <p className="section-kicker">Book a meeting</p>
+            <h2 className="section-title mt-4 max-w-[12ch]">
+              If the workflow is urgent, schedule directly here.
             </h2>
             <p className="section-copy mt-6">
-              Use the selector to see how the first Xelera build changes for revenue, operations,
-              product, and executive stakeholders.
+              Booking is the most reliable conversion path right now, so it should be visible and
+              easy instead of buried behind another page.
             </p>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <WorkloadFit />
-          </FadeIn>
-        </div>
-      </section>
-
-      <section className="section-shell border-y blue-divider bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_100%)]">
-        <div className="grid gap-8 lg:grid-cols-[0.84fr_1.16fr]">
-          <FadeIn>
-            <p className="section-kicker">How we work</p>
-            <h2 className="section-title mt-4 max-w-[13ch]">
-              A simpler path from AI interest to a deployed workflow.
-            </h2>
-          </FadeIn>
-          <div className="grid gap-5">
-            {processSteps.map((step, index) => (
-              <FadeIn key={step.title} delay={index * 0.08} className="white-panel rounded-[1.6rem] p-6">
-                <div className="flex gap-5">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-900/8 bg-[var(--color-paper-soft)] font-mono text-sm text-slate-700">
-                    0{index + 1}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-slate-950">{step.title}</h3>
-                    <p className="mt-3 text-base leading-7 text-slate-600">{step.copy}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="section-shell">
-        <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
-          <FadeIn>
-            <p className="section-kicker">Start the conversation</p>
-            <h2 className="section-title mt-4 max-w-[13ch]">
-              Tell us the workflow, bottleneck, or growth target you want to improve.
-            </h2>
-            <p className="section-copy mt-6">
-              The best conversations start with a specific business problem. We will help shape the
-              right AI path from there.
-            </p>
-            <div className="mt-10 grid gap-4">
-              <div className="white-panel rounded-[1.5rem] p-5">
-                <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
-                  Included in the flow
-                </p>
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                  Internal email alert, confirmation email, CRM sync, and a booking handoff for
-                  higher-intent conversations.
-                </p>
-              </div>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href={siteConfig.bookingUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-[var(--color-accent-strong)]"
+                className="button-primary"
               >
-                Prefer to skip the form? Book a Discovery Call
-                <ArrowRight className="h-4 w-4" />
+                Open Cal.com
               </a>
+              <Link href="/contact" className="button-secondary">
+                Contact Page
+              </Link>
             </div>
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <ContactForm />
+
+          <FadeIn delay={0.12} className="white-panel rounded-[2rem] p-4 sm:p-6">
+            <div className="overflow-hidden rounded-[1.5rem] border border-slate-900/8 bg-white">
+              <CalInlineEmbed bookingUrl={siteConfig.bookingUrl} className="w-full" />
+            </div>
           </FadeIn>
         </div>
       </section>

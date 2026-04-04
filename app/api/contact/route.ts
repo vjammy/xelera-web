@@ -182,13 +182,30 @@ export async function POST(request: Request) {
       );
     }
 
+    const hasEmailChannel =
+      Boolean(process.env.RESEND_API_KEY) &&
+      Boolean(process.env.RESEND_FROM_EMAIL) &&
+      Boolean(process.env.INTERNAL_CONTACT_EMAIL);
+    const hasHubSpotChannel = Boolean(process.env.HUBSPOT_PORTAL_ID && process.env.HUBSPOT_FORM_ID);
+    const hasWebhookChannel = Boolean(process.env.CRM_WEBHOOK_URL);
+
+    if (!hasEmailChannel && !hasHubSpotChannel && !hasWebhookChannel) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "Direct message delivery is not configured yet. Please book a discovery call below.",
+          bookingUrl: siteConfig.bookingUrl,
+        },
+        { status: 503 },
+      );
+    }
+
     const settled = await Promise.allSettled([
       sendInternalNotification(payload),
       sendConfirmation(payload),
-      ...(process.env.HUBSPOT_PORTAL_ID && process.env.HUBSPOT_FORM_ID
-        ? [submitHubSpot(payload)]
-        : []),
-      ...(process.env.CRM_WEBHOOK_URL ? [submitWebhook(payload)] : []),
+      ...(hasHubSpotChannel ? [submitHubSpot(payload)] : []),
+      ...(hasWebhookChannel ? [submitWebhook(payload)] : []),
     ]);
 
     const internalEmailSucceeded = settled[0]?.status === "fulfilled";
