@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f8fb;
-  --foreground: #0d1726;
-  --color-ink: #07111b;
-  --color-cloud: #edf5ff;
-  --color-paper: #ffffff;
-  --color-paper-soft: #eef3f8;
-  --color-body: #5f6f84;
-  --color-heading: #0d1726;
-  --color-accent: #27f6c4;
-  --color-accent-soft: #62d8ff;
-  --color-border: rgba(13, 23, 38, 0.09);
+  --background: #07101f;
+  --foreground: #e8efff;
+  --color-ink: #07101f;
+  --color-ink-soft: #0d1b35;
+  --color-cloud: #edf4ff;
+  --color-paper: rgba(11, 27, 55, 0.86);
+  --color-paper-soft: rgba(20, 42, 79, 0.76);
+  --color-body: #a8b8d8;
+  --color-heading: #f6f9ff;
+  --color-accent: #4f7cff;
+  --color-accent-strong: #2f5cff;
+  --color-accent-soft: #8bb6ff;
+  --color-border: rgba(159, 187, 255, 0.18);
 }
 
 @theme inline {
@@ -30,7 +32,10 @@ html {
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(79, 124, 255, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgba(115, 169, 255, 0.15), transparent 24%),
+    linear-gradient(180deg, #07101f 0%, #081426 28%, #0a1730 60%, #07111f 100%);
   color: var(--foreground);
   font-family: var(--font-space-grotesk), sans-serif;
 }
@@ -43,7 +48,7 @@ button {
 }
 
 ::selection {
-  background: rgba(39, 246, 196, 0.25);
+  background: rgba(79, 124, 255, 0.35);
 }
 
 .hero-shell {
@@ -52,9 +57,9 @@ button {
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 96px 96px;
+    linear-gradient(rgba(157, 186, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157, 186, 255, 0.1) 1px, transparent 1px);
+  background-size: 88px 88px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 92%);
 }
 
@@ -70,7 +75,7 @@ button {
   font-size: 0.72rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(66, 96, 128, 0.72);
+  color: rgba(150, 182, 255, 0.72);
 }
 
 .section-title {
@@ -94,11 +99,12 @@ button {
   justify-content: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  background: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-strong));
   padding: 0.85rem 1.4rem;
   font-size: 0.92rem;
   font-weight: 600;
-  color: #07111b;
+  color: white;
+  box-shadow: 0 18px 45px -24px rgba(56, 96, 255, 0.7);
 }
 
 .button-primary:hover {
@@ -111,35 +117,55 @@ button {
   justify-content: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(13, 23, 38, 0.12);
-  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(149, 183, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
   padding: 0.85rem 1.4rem;
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--color-heading);
+  color: var(--color-cloud);
+  backdrop-filter: blur(14px);
 }
 
 .button-secondary:hover {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .input-shell {
   width: 100%;
   border-radius: 1.1rem;
-  border: 1px solid rgba(13, 23, 38, 0.1);
-  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(149, 183, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
   padding: 0.95rem 1rem;
   color: var(--color-heading);
   outline: none;
+  backdrop-filter: blur(14px);
 }
 
 .input-shell::placeholder {
-  color: rgba(148, 163, 184, 0.9);
+  color: rgba(185, 199, 227, 0.78);
 }
 
 .input-shell:focus {
-  border-color: rgba(39, 246, 196, 0.5);
-  box-shadow: 0 0 0 4px rgba(39, 246, 196, 0.08);
+  border-color: rgba(79, 124, 255, 0.55);
+  box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.12);
+}
+
+.blue-panel {
+  border: 1px solid rgba(149, 183, 255, 0.14);
+  background:
+    linear-gradient(180deg, rgba(13, 27, 53, 0.82), rgba(10, 21, 40, 0.9));
+  box-shadow: 0 24px 100px -60px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(18px);
+}
+
+.blue-panel-soft {
+  border: 1px solid rgba(149, 183, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+}
+
+.blue-divider {
+  border-color: rgba(149, 183, 255, 0.14);
 }
 
 @media (min-width: 640px) {

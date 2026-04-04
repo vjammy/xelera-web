@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="section-shell bg-[linear-gradient(180deg,#f6f8fb_0%,#eef3f8_100%)] pt-28">
+    <div className="section-shell pt-28">
       <FadeIn>
         <p className="section-kicker">About Xelera</p>
         <div className="mt-4 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -27,13 +27,13 @@ export default function AboutPage() {
           <FadeIn
             key={principle.title}
             delay={index * 0.08}
-            className="rounded-[1.75rem] border border-slate-900/8 bg-white p-7 shadow-[0_24px_80px_-56px_rgba(15,23,42,0.22)]"
+            className="blue-panel rounded-[1.75rem] p-7"
           >
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-blue-100/60">
               Principle {index + 1}
             </p>
-            <h2 className="mt-4 text-2xl font-medium text-slate-950">{principle.title}</h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">{principle.description}</p>
+            <h2 className="mt-4 text-2xl font-medium text-white">{principle.title}</h2>
+            <p className="mt-4 text-base leading-7 text-slate-300">{principle.description}</p>
           </FadeIn>
         ))}
       </div>

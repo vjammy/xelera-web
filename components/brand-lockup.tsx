@@ -22,14 +22,14 @@ export function BrandLockup({ compact = false, href = "/", onClick }: BrandLocku
         <div
           className={
             compact
-              ? "text-[1.5rem] font-semibold tracking-[-0.05em] text-slate-950"
-              : "text-[1.85rem] font-semibold tracking-[-0.05em] text-slate-950"
+              ? "text-[1.5rem] font-semibold tracking-[-0.05em] text-white"
+              : "text-[1.85rem] font-semibold tracking-[-0.05em] text-white"
           }
         >
           Xelera.ai
         </div>
         {!compact ? (
-          <div className="-mt-0.5 text-sm text-slate-600">
+          <div className="-mt-0.5 text-sm text-slate-300">
             AI systems for growth and operational clarity
           </div>
         ) : null}

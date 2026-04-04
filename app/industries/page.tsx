@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function IndustriesPage() {
   return (
-    <div className="section-shell bg-[linear-gradient(180deg,#f6f8fb_0%,#eef3f8_100%)] pt-28">
+    <div className="section-shell pt-28">
       <FadeIn>
         <p className="section-kicker">Industries and use cases</p>
         <div className="mt-4 grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
@@ -26,16 +26,16 @@ export default function IndustriesPage() {
           <FadeIn
             key={industry.title}
             delay={index * 0.08}
-            className="rounded-[1.75rem] border border-slate-900/8 bg-white p-7 shadow-[0_24px_80px_-56px_rgba(15,23,42,0.22)]"
+            className="blue-panel rounded-[1.75rem] p-7"
           >
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">{industry.kicker}</p>
-            <h2 className="mt-4 text-2xl font-medium text-slate-950">{industry.title}</h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">{industry.description}</p>
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-blue-100/60">{industry.kicker}</p>
+            <h2 className="mt-4 text-2xl font-medium text-white">{industry.title}</h2>
+            <p className="mt-4 text-base leading-7 text-slate-300">{industry.description}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               {industry.examples.map((example) => (
                 <span
                   key={example}
-                  className="rounded-full border border-slate-900/8 bg-[var(--color-paper-soft)] px-3 py-1.5 text-sm text-slate-600"
+                  className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-sm text-slate-300"
                 >
                   {example}
                 </span>

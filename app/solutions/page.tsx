@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <div className="section-shell bg-[linear-gradient(180deg,#f6f8fb_0%,#eef3f8_100%)] pt-28">
+    <div className="section-shell pt-28">
       <FadeIn>
         <p className="section-kicker">Solutions</p>
         <div className="mt-4 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
@@ -28,16 +28,16 @@ export default function SolutionsPage() {
           <FadeIn
             key={solution.title}
             delay={index * 0.08}
-            className="grid gap-6 rounded-[1.75rem] border border-slate-900/8 bg-white p-7 shadow-[0_24px_80px_-56px_rgba(15,23,42,0.22)] lg:grid-cols-[0.55fr_0.45fr]"
+            className="blue-panel grid gap-6 rounded-[1.75rem] p-7 lg:grid-cols-[0.55fr_0.45fr]"
           >
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">{solution.eyebrow}</p>
-              <h2 className="mt-4 text-3xl font-medium text-slate-950">{solution.title}</h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">{solution.description}</p>
+              <p className="font-mono text-xs uppercase tracking-[0.28em] text-blue-100/60">{solution.eyebrow}</p>
+              <h2 className="mt-4 text-3xl font-medium text-white">{solution.title}</h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">{solution.description}</p>
             </div>
             <div className="space-y-3">
               {solution.highlights.map((highlight) => (
-                <div key={highlight} className="rounded-2xl border border-slate-900/8 bg-[var(--color-paper-soft)] px-4 py-3 text-sm text-slate-600">
+                <div key={highlight} className="rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-slate-300">
                   {highlight}
                 </div>
               ))}
@@ -46,11 +46,11 @@ export default function SolutionsPage() {
         ))}
       </div>
 
-      <FadeIn delay={0.15} className="mt-16 rounded-[2rem] border border-slate-900/8 bg-[linear-gradient(135deg,#ffffff,#eef3f8)] p-8 shadow-[0_28px_90px_-60px_rgba(15,23,42,0.24)]">
+      <FadeIn delay={0.15} className="blue-panel mt-16 rounded-[2rem] p-8">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-kicker">Next step</p>
-            <h2 className="mt-4 text-3xl font-medium text-slate-950">Need help choosing the right starting point?</h2>
+            <h2 className="mt-4 text-3xl font-medium text-white">Need help choosing the right starting point?</h2>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/contact" className="button-primary">
@@ -62,7 +62,7 @@ export default function SolutionsPage() {
               rel="noreferrer"
               className="button-secondary"
             >
-              Book a Call
+              Book a 30-minute AI workflow review
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>

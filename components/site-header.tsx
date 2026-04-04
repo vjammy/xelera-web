@@ -11,7 +11,7 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-900/8 bg-[rgba(246,248,251,0.84)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b blue-divider bg-[rgba(7,16,31,0.78)] backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
         <BrandLockup href="/" onClick={() => setIsOpen(false)} />
 
@@ -20,7 +20,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-slate-600 transition-colors hover:text-slate-950"
+              className="text-sm text-slate-300 transition-colors hover:text-white"
             >
               {item.label}
             </Link>
@@ -44,7 +44,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex rounded-full border border-slate-900/10 bg-white p-3 text-slate-900 shadow-sm lg:hidden"
+          className="inline-flex rounded-full border border-white/10 bg-white/5 p-3 text-white shadow-sm lg:hidden"
           aria-label="Toggle navigation"
           onClick={() => setIsOpen((current) => !current)}
         >
@@ -53,13 +53,13 @@ export function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-slate-900/8 bg-[rgba(246,248,251,0.98)] px-6 py-5 lg:hidden">
+        <div className="border-t blue-divider bg-[rgba(7,16,31,0.96)] px-6 py-5 lg:hidden">
           <div className="flex flex-col gap-4">
             {navigationLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base text-slate-700 transition-colors hover:text-slate-950"
+                className="text-base text-slate-200 transition-colors hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
