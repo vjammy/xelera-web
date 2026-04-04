@@ -10,8 +10,8 @@ export const navigationLinks = [
 ];
 
 export const homeProofItems = [
-  { value: "ROI-led", label: "Focused on workflows tied to revenue, cost, and response speed" },
-  { value: "Secure rollout", label: "Governed delivery with review points and human control" },
+  { value: "Build-first", label: "Focused on projects that can move from concept to workflow fast" },
+  { value: "Operator-led", label: "Designed around the teams who have to run the process every day" },
   { value: "Mid-market fit", label: "Built for practical operators, not innovation theater" },
 ];
 
@@ -23,31 +23,34 @@ export const homeSignalItems = [
 
 export const roiProofBlocks = [
   {
-    metric: "32%",
-    label: "Faster lead response time",
-    detail: "Typical first-phase result when inbound qualification and routing are automated with human oversight.",
+    metric: "01",
+    label: "Lead qualification and routing",
+    detail:
+      "A practical build track for teams that want faster inbound follow-up, better prioritization, and fewer manual handoff delays.",
   },
   {
-    metric: "21%",
-    label: "Lower manual workflow load",
-    detail: "Operational teams reclaim time by removing repetitive triage, knowledge lookup, and handoff work.",
+    metric: "02",
+    label: "Internal knowledge and decision support",
+    detail:
+      "A focused project area for businesses that need one reliable layer for answers, policy guidance, and team-specific workflow context.",
   },
   {
-    metric: "11 weeks",
-    label: "To visible business impact",
-    detail: "A focused workflow rollout can move from prioritization to measurable results without a massive transformation program.",
+    metric: "03",
+    label: "Customer service and operations automation",
+    detail:
+      "A current delivery pattern for teams looking to reduce repetitive work, improve service responsiveness, and keep humans in control.",
   },
 ];
 
 export const featuredCaseStudy = {
   industry: "B2B services and revenue operations",
-  title: "A mid-market services team cut lead-response lag and improved conversion discipline.",
+  title: "A representative workflow we are building for service-led mid-market teams.",
   summary:
-    "Xelera mapped the client’s inbound funnel, automated qualification and routing, and added guided AI support for proposal and follow-up workflows. The result was a faster handoff between marketing, sales, and delivery with clearer accountability.",
+    "Instead of presenting a client case study we have not earned yet, Xelera shows the kind of workflow program we are actively building: map the inbound funnel, automate qualification and routing, and add guided AI support for proposal, follow-up, and delivery coordination.",
   outcomes: [
-    "32% faster initial lead response time",
-    "18% improvement in qualified-opportunity progression",
-    "Fewer manual handoff failures between sales and delivery",
+    "Reduce response lag between inbound demand and first action",
+    "Create cleaner handoffs across sales, operations, and delivery",
+    "Give leadership more visibility into workflow performance",
   ],
 };
 

@@ -198,14 +198,15 @@ export default function Home() {
 
       <section className="section-shell border-y border-slate-900/8 bg-[var(--color-paper-soft)]">
         <FadeIn>
-          <p className="section-kicker">Proof that matters</p>
+          <p className="section-kicker">What we are building</p>
           <div className="mt-4 grid gap-6 lg:grid-cols-[0.78fr_1.22fr]">
             <h2 className="section-title max-w-[14ch]">
-              Show buyers the business case, not just the technology story.
+              Practical AI workflow tracks for companies that want real operating leverage.
             </h2>
             <p className="section-copy">
-              Mid-market teams need clear ROI signals before they commit to a new AI initiative.
-              These proof blocks frame the kinds of improvements Xelera is built to pursue.
+              Xelera is early, so we do not pretend to have a long client roster. We show the
+              workflow builds we are actively focused on and the business outcomes they are meant
+              to unlock.
             </p>
           </div>
         </FadeIn>
@@ -245,13 +246,14 @@ export default function Home() {
       <section className="section-shell bg-[linear-gradient(180deg,#ffffff_0%,#f7fafc_100%)]">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <FadeIn>
-            <p className="section-kicker">Industry-specific case study</p>
+            <p className="section-kicker">Industry-specific build spotlight</p>
             <h2 className="section-title mt-4 max-w-[14ch]">
-              A concrete example for service-led mid-market growth teams.
+              A concrete workflow concept for service-led mid-market growth teams.
             </h2>
             <p className="section-copy mt-6">
-              Use a case story like this to reassure buyers that Xelera understands workflow pain,
-              handoff friction, and ROI pressure in an established operating business.
+              This section is framed as a representative project, not a client win. It helps buyers
+              see that Xelera understands workflow pain, handoff friction, and ROI pressure in an
+              established operating business.
             </p>
           </FadeIn>
           <FadeIn

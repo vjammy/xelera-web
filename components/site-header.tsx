@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { BrandLockup } from "@/components/brand-lockup";
 import { trackEvent } from "@/lib/analytics";
 import { navigationLinks, siteConfig } from "@/lib/site-content";
 
@@ -12,17 +13,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-900/8 bg-[rgba(246,248,251,0.84)] backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-900/10 bg-white font-mono text-sm text-slate-900 shadow-sm">
-            X
-          </span>
-          <div>
-            <div className="font-mono text-[0.68rem] uppercase tracking-[0.32em] text-slate-500">
-              Xelera.ai
-            </div>
-            <div className="text-sm text-slate-600">AI systems for growth and operational clarity</div>
-          </div>
-        </Link>
+        <BrandLockup href="/" onClick={() => setIsOpen(false)} />
 
         <nav className="hidden items-center gap-8 lg:flex">
           {navigationLinks.map((item) => (
