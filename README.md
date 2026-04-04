@@ -50,16 +50,7 @@ The route is designed so CRM and email failures do not automatically erase the l
 
 ## GitHub setup
 
-Create a GitHub repository named `Xelera Design`, then connect the local repo:
-
-```bash
-git init
-git add .
-git commit -m "Initial Xelera.ai redesign"
-git branch -M main
-git remote add origin <your-github-repo-url>
-git push -u origin main
-```
+The local project is already initialized and connected to the GitHub repository.
 
 ## Netlify deployment
 
@@ -75,5 +66,5 @@ Recommended build settings:
 
 ## Notes
 
-- The current content is a strong first-pass positioning layer and should be refined once Xelera’s exact messaging, proof points, and customer references are available.
+- The current content is a strong first-pass positioning layer and should be refined once Xelera's exact messaging, proof points, and customer references are available.
 - Replace the booking link placeholder before launch.
