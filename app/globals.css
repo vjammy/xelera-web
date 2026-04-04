@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07111b;
-  --foreground: #edf5ff;
+  --background: #f6f8fb;
+  --foreground: #0d1726;
   --color-ink: #07111b;
   --color-cloud: #edf5ff;
+  --color-paper: #ffffff;
+  --color-paper-soft: #eef3f8;
+  --color-body: #5f6f84;
+  --color-heading: #0d1726;
   --color-accent: #27f6c4;
   --color-accent-soft: #62d8ff;
-  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(13, 23, 38, 0.09);
 }
 
 @theme inline {
@@ -66,7 +70,7 @@ button {
   font-size: 0.72rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(207, 250, 254, 0.58);
+  color: rgba(66, 96, 128, 0.72);
 }
 
 .section-title {
@@ -74,14 +78,14 @@ button {
   font-size: clamp(2.3rem, 5vw, 4.5rem);
   line-height: 0.98;
   letter-spacing: -0.05em;
-  color: white;
+  color: var(--color-heading);
 }
 
 .section-copy {
   max-width: 40rem;
   font-size: 1.05rem;
   line-height: 1.95rem;
-  color: rgb(184 198 219);
+  color: var(--color-body);
 }
 
 .button-primary {
@@ -107,25 +111,25 @@ button {
   justify-content: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(13, 23, 38, 0.12);
+  background: rgba(255, 255, 255, 0.72);
   padding: 0.85rem 1.4rem;
   font-size: 0.92rem;
   font-weight: 600;
-  color: white;
+  color: var(--color-heading);
 }
 
 .button-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .input-shell {
   width: 100%;
   border-radius: 1.1rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(13, 23, 38, 0.1);
+  background: rgba(255, 255, 255, 0.96);
   padding: 0.95rem 1rem;
-  color: white;
+  color: var(--color-heading);
   outline: none;
 }
 

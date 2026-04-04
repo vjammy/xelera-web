@@ -99,7 +99,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-[0_30px_100px_-40px_rgba(0,0,0,0.75)] backdrop-blur sm:p-8">
+    <div className="rounded-[2rem] border border-slate-900/8 bg-white p-6 shadow-[0_30px_100px_-50px_rgba(15,23,42,0.18)] sm:p-8">
       <form
         className="grid gap-5"
         onSubmit={handleSubmit}
@@ -147,7 +147,7 @@ export function ContactForm() {
         </div>
 
         <label className="grid gap-2">
-          <span className="text-sm font-medium text-slate-200">Area of interest</span>
+          <span className="text-sm font-medium text-slate-700">Area of interest</span>
           <select
             value={formState.interest}
             onChange={(event) => updateField("interest", event.target.value)}
@@ -162,7 +162,7 @@ export function ContactForm() {
         </label>
 
         <label className="grid gap-2">
-          <span className="text-sm font-medium text-slate-200">What should we know?</span>
+          <span className="text-sm font-medium text-slate-700">What should we know?</span>
           <textarea
             value={formState.message}
             onChange={(event) => updateField("message", event.target.value)}
@@ -171,7 +171,7 @@ export function ContactForm() {
           />
         </label>
 
-        <div className="flex flex-col gap-4 border-t border-white/8 pt-5">
+        <div className="flex flex-col gap-4 border-t border-slate-900/8 pt-5">
           <button
             type="submit"
             disabled={submitDisabled || isPending}
@@ -180,7 +180,7 @@ export function ContactForm() {
             {isPending ? "Sending..." : "Request a Demo"}
             <ArrowRight className="h-4 w-4" />
           </button>
-          <p className="text-sm leading-6 text-slate-400">
+          <p className="text-sm leading-6 text-slate-500">
             Submission triggers an internal alert, a confirmation email, CRM logging, and a booking
             handoff.
           </p>
@@ -234,7 +234,7 @@ function Field({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm font-medium text-slate-200">{label}</span>
+      <span className="text-sm font-medium text-slate-700">{label}</span>
       <input
         type={type}
         value={value}

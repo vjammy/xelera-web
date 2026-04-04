@@ -10,17 +10,17 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/8 bg-[rgba(4,10,17,0.82)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-slate-900/8 bg-[rgba(246,248,251,0.84)] backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
         <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/25 bg-white/[0.04] font-mono text-sm text-cyan-100">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-900/10 bg-white font-mono text-sm text-slate-900 shadow-sm">
             X
           </span>
           <div>
-            <div className="font-mono text-[0.68rem] uppercase tracking-[0.32em] text-cyan-100/55">
+            <div className="font-mono text-[0.68rem] uppercase tracking-[0.32em] text-slate-500">
               Xelera.ai
             </div>
-            <div className="text-sm text-slate-300">AI operating systems for growth</div>
+            <div className="text-sm text-slate-600">AI systems for growth and operational clarity</div>
           </div>
         </Link>
 
@@ -29,7 +29,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-slate-300 transition-colors hover:text-white"
+              className="text-sm text-slate-600 transition-colors hover:text-slate-950"
             >
               {item.label}
             </Link>
@@ -53,7 +53,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex rounded-full border border-white/10 bg-white/[0.04] p-3 text-white lg:hidden"
+          className="inline-flex rounded-full border border-slate-900/10 bg-white p-3 text-slate-900 shadow-sm lg:hidden"
           aria-label="Toggle navigation"
           onClick={() => setIsOpen((current) => !current)}
         >
@@ -62,13 +62,13 @@ export function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-white/8 bg-[rgba(4,10,17,0.96)] px-6 py-5 lg:hidden">
+        <div className="border-t border-slate-900/8 bg-[rgba(246,248,251,0.98)] px-6 py-5 lg:hidden">
           <div className="flex flex-col gap-4">
             {navigationLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base text-slate-300 transition-colors hover:text-white"
+                className="text-base text-slate-700 transition-colors hover:text-slate-950"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

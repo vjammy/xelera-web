@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="section-shell pt-28">
+    <div className="section-shell bg-[linear-gradient(180deg,#f6f8fb_0%,#eef3f8_100%)] pt-28">
       <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <FadeIn>
           <p className="section-kicker">Contact</p>
@@ -19,15 +19,15 @@ export default function ContactPage() {
             Whether you need strategic alignment, a faster path to deployment, or a more durable
             AI operating model, Xelera can help shape the right next move.
           </p>
-          <div className="mt-8 rounded-[1.75rem] border border-white/8 bg-white/[0.03] p-6">
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-100/55">
+          <div className="mt-8 rounded-[1.75rem] border border-slate-900/8 bg-[var(--color-paper-soft)] p-6">
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
               Prefer live scheduling?
             </p>
             <a
               href={siteConfig.bookingUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center rounded-full border border-white/12 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/[0.08]"
+              className="mt-4 inline-flex items-center rounded-full border border-slate-900/10 bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-slate-50"
             >
               Book a Call
             </a>

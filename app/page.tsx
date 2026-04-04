@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="relative isolate overflow-hidden">
+    <div className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#f6f8fb_0%,#eef3f8_100%)]">
       <section className="hero-shell relative border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(33,212,253,0.3),_transparent_35%),radial-gradient(circle_at_80%_20%,_rgba(0,255,170,0.22),_transparent_25%),linear-gradient(180deg,_rgba(6,11,19,0.75),_rgba(6,11,19,0.95))]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent" />
@@ -151,11 +151,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell bg-transparent">
         <FadeIn>
           <p className="section-kicker">What Xelera does</p>
           <div className="mt-4 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <h2 className="section-title">
+            <h2 className="section-title max-w-[14ch]">
               Apply AI where it creates visible gains in revenue, operations, and customer experience.
             </h2>
             <p className="section-copy">
@@ -171,9 +171,9 @@ export default function Home() {
             <FadeIn
               key={card.title}
               delay={index * 0.08}
-              className="group rounded-[1.75rem] border border-white/8 bg-white/[0.03] p-7 transition-colors duration-300 hover:bg-white/[0.05]"
+              className="group rounded-[1.75rem] border border-slate-900/8 bg-white p-7 shadow-[0_24px_80px_-56px_rgba(15,23,42,0.28)] transition-colors duration-300 hover:bg-slate-50"
             >
-              <div className="inline-flex rounded-full border border-white/10 bg-white/5 p-3 text-[var(--color-accent)]">
+              <div className="inline-flex rounded-full border border-slate-900/8 bg-[var(--color-paper-soft)] p-3 text-[var(--color-heading)]">
                 {card.icon === "brain" ? (
                   <BrainCircuit className="h-5 w-5" />
                 ) : card.icon === "bot" ? (
@@ -184,9 +184,9 @@ export default function Home() {
                   <Orbit className="h-5 w-5" />
                 )}
               </div>
-              <h3 className="mt-6 text-2xl font-medium text-white">{card.title}</h3>
-              <p className="mt-4 max-w-xl text-base leading-7 text-slate-300">{card.copy}</p>
-              <p className="mt-6 font-mono text-xs uppercase tracking-[0.28em] text-cyan-100/55">
+              <h3 className="mt-6 text-2xl font-medium text-slate-950">{card.title}</h3>
+              <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">{card.copy}</p>
+              <p className="mt-6 font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
                 {card.tagline}
               </p>
             </FadeIn>
@@ -194,7 +194,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell border-y border-white/8 bg-white/[0.02]">
+      <section className="section-shell border-y border-slate-900/8 bg-white">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <FadeIn>
             <p className="section-kicker">Find your AI path</p>
@@ -212,7 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section className="section-shell bg-[linear-gradient(180deg,#f9fbfd_0%,#f1f5f9_100%)]">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <FadeIn>
             <p className="section-kicker">How we work</p>
@@ -225,14 +225,14 @@ export default function Home() {
               <FadeIn
                 key={step.title}
                 delay={index * 0.08}
-                className="flex gap-5 rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-6"
+                className="flex gap-5 rounded-[1.5rem] border border-slate-900/8 bg-white p-6 shadow-[0_18px_60px_-46px_rgba(15,23,42,0.24)]"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 font-mono text-sm text-cyan-100">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-900/8 bg-[var(--color-paper-soft)] font-mono text-sm text-slate-700">
                   0{index + 1}
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium text-white">{step.title}</h3>
-                  <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">{step.copy}</p>
+                  <h3 className="text-xl font-medium text-slate-950">{step.title}</h3>
+                  <p className="mt-3 max-w-2xl text-base leading-7 text-slate-600">{step.copy}</p>
                 </div>
               </FadeIn>
             ))}
@@ -240,7 +240,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="section-shell border-t border-white/8 bg-[linear-gradient(180deg,rgba(6,11,19,0.4),rgba(6,11,19,0.96))]">
+      <section id="contact" className="section-shell border-t border-slate-900/8 bg-white">
         <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
           <FadeIn>
             <p className="section-kicker">Start the conversation</p>
@@ -250,11 +250,11 @@ export default function Home() {
               qualify the opportunity, and move you toward the right next step.
             </p>
             <div className="mt-10 grid gap-4">
-              <div className="rounded-[1.4rem] border border-white/8 bg-white/[0.03] p-5">
-                <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-100/55">
+              <div className="rounded-[1.4rem] border border-slate-900/8 bg-[var(--color-paper-soft)] p-5">
+                <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
                   Included in the flow
                 </p>
-                <p className="mt-4 text-base leading-7 text-slate-300">
+                <p className="mt-4 text-base leading-7 text-slate-600">
                   Internal email alert, prospect confirmation email, CRM sync, and a direct booking
                   path for high-intent conversations.
                 </p>
