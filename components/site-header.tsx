@@ -44,7 +44,7 @@ export function SiteHeader() {
             className="button-secondary"
             onClick={() => trackEvent("booking_click", { location: "header" })}
           >
-            Book a Call
+            Book a 30-minute AI workflow review
           </a>
           <Link href="/contact" className="button-primary">
             Request a Demo
@@ -85,7 +85,7 @@ export function SiteHeader() {
                   trackEvent("booking_click", { location: "mobile_header" });
                 }}
               >
-                Book a Call
+                Book a 30-minute AI workflow review
               </a>
               <Link href="/contact" className="button-primary" onClick={() => setIsOpen(false)}>
                 Request a Demo

@@ -4,10 +4,12 @@ import { ContactForm } from "@/components/contact-form";
 import { FadeIn } from "@/components/fade-in";
 import { WorkloadFit } from "@/components/workload-fit";
 import {
+  featuredCaseStudy,
   homeCapabilityCards,
   homeProofItems,
   homeSignalItems,
   processSteps,
+  roiProofBlocks,
   siteConfig,
 } from "@/lib/site-content";
 
@@ -48,7 +50,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
               >
-                Book a Call
+                Book a 30-minute AI workflow review
               </a>
             </div>
             <div className="mt-12 grid gap-4 sm:grid-cols-3">
@@ -194,6 +196,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-shell border-y border-slate-900/8 bg-[var(--color-paper-soft)]">
+        <FadeIn>
+          <p className="section-kicker">Proof that matters</p>
+          <div className="mt-4 grid gap-6 lg:grid-cols-[0.78fr_1.22fr]">
+            <h2 className="section-title max-w-[14ch]">
+              Show buyers the business case, not just the technology story.
+            </h2>
+            <p className="section-copy">
+              Mid-market teams need clear ROI signals before they commit to a new AI initiative.
+              These proof blocks frame the kinds of improvements Xelera is built to pursue.
+            </p>
+          </div>
+        </FadeIn>
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {roiProofBlocks.map((item, index) => (
+            <FadeIn
+              key={item.label}
+              delay={index * 0.08}
+              className="rounded-[1.75rem] border border-slate-900/8 bg-white p-7 shadow-[0_24px_80px_-56px_rgba(15,23,42,0.2)]"
+            >
+              <p className="text-5xl font-semibold tracking-[-0.05em] text-slate-950">{item.metric}</p>
+              <h3 className="mt-4 text-xl font-medium text-slate-950">{item.label}</h3>
+              <p className="mt-4 text-base leading-7 text-slate-600">{item.detail}</p>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
       <section className="section-shell border-y border-slate-900/8 bg-white">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <FadeIn>
@@ -208,6 +238,43 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <WorkloadFit />
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="section-shell bg-[linear-gradient(180deg,#ffffff_0%,#f7fafc_100%)]">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <FadeIn>
+            <p className="section-kicker">Industry-specific case study</p>
+            <h2 className="section-title mt-4 max-w-[14ch]">
+              A concrete example for service-led mid-market growth teams.
+            </h2>
+            <p className="section-copy mt-6">
+              Use a case story like this to reassure buyers that Xelera understands workflow pain,
+              handoff friction, and ROI pressure in an established operating business.
+            </p>
+          </FadeIn>
+          <FadeIn
+            delay={0.08}
+            className="rounded-[1.9rem] border border-slate-900/8 bg-white p-8 shadow-[0_28px_90px_-60px_rgba(15,23,42,0.22)]"
+          >
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
+              {featuredCaseStudy.industry}
+            </p>
+            <h3 className="mt-4 text-3xl font-medium tracking-[-0.03em] text-slate-950">
+              {featuredCaseStudy.title}
+            </h3>
+            <p className="mt-5 text-base leading-8 text-slate-600">{featuredCaseStudy.summary}</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {featuredCaseStudy.outcomes.map((outcome) => (
+                <div
+                  key={outcome}
+                  className="rounded-2xl border border-slate-900/8 bg-[var(--color-paper-soft)] px-4 py-4 text-sm leading-6 text-slate-700"
+                >
+                  {outcome}
+                </div>
+              ))}
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -265,7 +332,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-[var(--color-accent)]"
               >
-                Prefer to skip the form? Book directly
+                Prefer to skip the form? Book a 30-minute AI workflow review
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

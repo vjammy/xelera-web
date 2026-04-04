@@ -31,7 +31,7 @@ export function SiteFooter() {
             rel="noreferrer"
             className="transition-colors hover:text-slate-950"
           >
-            Book a Call
+            Book a 30-minute AI workflow review
           </a>
         </div>
       </div>

@@ -207,7 +207,7 @@ export function ContactForm() {
                   className="mt-2 inline-flex items-center gap-2 font-semibold text-[var(--color-accent)]"
                   onClick={() => trackEvent("booking_click", { location: "contact_form_success" })}
                 >
-                  Book a call now
+                  Book a 30-minute AI workflow review
                   <ArrowRight className="h-4 w-4" />
                 </a>
               ) : null}
