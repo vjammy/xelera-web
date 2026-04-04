@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07111b;
+  --foreground: #edf5ff;
+  --color-ink: #07111b;
+  --color-cloud: #edf5ff;
+  --color-accent: #27f6c4;
+  --color-accent-soft: #62d8ff;
+  --color-border: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+a,
+button {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 220ms;
+  transition-timing-function: ease;
+}
+
+::selection {
+  background: rgba(39, 246, 196, 0.25);
+}
+
+.hero-shell {
+  position: relative;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 92%);
+}
+
+.section-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 88rem;
+  padding: 6rem 1.5rem;
+}
+
+.section-kicker {
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(207, 250, 254, 0.58);
+}
+
+.section-title {
+  max-width: 16ch;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.section-copy {
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.95rem;
+  color: rgb(184 198 219);
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-accent);
+  padding: 0.85rem 1.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #07111b;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.85rem 1.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: white;
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.input-shell {
+  width: 100%;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.95rem 1rem;
+  color: white;
+  outline: none;
+}
+
+.input-shell::placeholder {
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.input-shell:focus {
+  border-color: rgba(39, 246, 196, 0.5);
+  box-shadow: 0 0 0 4px rgba(39, 246, 196, 0.08);
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-inline: 3rem;
+  }
+}
