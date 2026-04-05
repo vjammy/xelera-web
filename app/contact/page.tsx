@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a conversation with Xelera about AI strategy, production delivery, or governed automation.",
+  description: "Book a discovery call with Xelera or send a brief about the workflow you want to automate.",
 };
 
 export default function ContactPage() {
@@ -18,8 +18,8 @@ export default function ContactPage() {
           <p className="section-kicker">Contact</p>
           <h1 className="section-title mt-4">Tell us where the AI opportunity is getting stuck.</h1>
           <p className="section-copy mt-6">
-            Whether you need strategic alignment, a faster path to deployment, or a more durable
-            AI operating model, Xelera can help shape the right next move.
+            Whether you want to automate work, improve GTM execution, or build an internal AI
+            system, we can help shape the right next move.
           </p>
           <div className="white-panel mt-8 rounded-[1.75rem] p-6">
             <p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">
@@ -55,7 +55,7 @@ export default function ContactPage() {
               rel="noreferrer"
               className="button-secondary"
             >
-              Open full Cal page
+              Open full booking page
             </a>
           </div>
           <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-slate-900/8 bg-white">

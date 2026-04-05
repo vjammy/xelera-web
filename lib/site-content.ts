@@ -1,84 +1,239 @@
 export const siteConfig = {
-  bookingUrl:
-    process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://cal.com/vivek-jamwal-hfu8xu",
+  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://cal.com/vivek-jamwal-hfu8xu",
 };
 
 export const navigationLinks = [
-  { href: "/solutions", label: "Solutions" },
-  { href: "/industries", label: "Industries" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/prototypes", label: "Prototypes" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/careers", label: "Careers" },
 ];
 
-export const homeProofItems = [
-  { value: "Build-first", label: "Focused on projects that can move from concept to workflow fast" },
-  { value: "Operator-led", label: "Designed around the teams who have to run the process every day" },
-  { value: "Mid-market fit", label: "Built for practical operators, not innovation theater" },
+export const heroHighlights = [
+  "Infrastructure-agnostic",
+  "On-prem or cloud",
+  "Built for real operations",
 ];
 
-export const homeSignalItems = [
-  { label: "Revenue use-case fit", value: "92%", progress: "92%" },
-  { label: "Operational readiness", value: "84%", progress: "84%" },
-  { label: "Risk control coverage", value: "88%", progress: "88%" },
-];
-
-export const roiProofBlocks = [
+export const valueCards = [
   {
-    metric: "01",
-    label: "Lead qualification and routing",
-    detail:
-      "A practical build track for teams that want faster inbound follow-up, better prioritization, and fewer manual handoff delays.",
+    title: "Cut Operating Effort",
+    description: "Automate repetitive tasks across functions",
   },
   {
-    metric: "02",
-    label: "Internal knowledge and decision support",
-    detail:
-      "A focused project area for businesses that need one reliable layer for answers, policy guidance, and team-specific workflow context.",
+    title: "Move Faster",
+    description: "Agents that research, draft, triage, and execute",
   },
   {
-    metric: "03",
-    label: "Customer service and operations automation",
-    detail:
-      "A current delivery pattern for teams looking to reduce repetitive work, improve service responsiveness, and keep humans in control.",
+    title: "Improve Quality",
+    description: "Consistent decisions and reduced human error",
   },
 ];
 
-export const featuredCaseStudy = {
-  industry: "B2B services and revenue operations",
-  title: "A representative workflow we are building for service-led mid-market teams.",
-  summary:
-    "Instead of presenting a client case study we have not earned yet, Xelera shows the kind of workflow program we are actively building: map the inbound funnel, automate qualification and routing, and add guided AI support for proposal, follow-up, and delivery coordination.",
-  outcomes: [
-    "Reduce response lag between inbound demand and first action",
-    "Create cleaner handoffs across sales, operations, and delivery",
-    "Give leadership more visibility into workflow performance",
-  ],
-};
+export const roiStats = [
+  { value: "30-70%", label: "Time saved on repetitive workflows" },
+  { value: "Faster", label: "Response times in sales, support, and ops" },
+  { value: "Lower", label: "Error rates through automated validation" },
+  { value: "Zero", label: "Downtime with safe deployment strategy" },
+];
 
-export const homeCapabilityCards = [
+export const services = [
   {
-    icon: "brain",
-    title: "Find the AI use cases worth funding",
-    copy: "Prioritize the workflows where automation, copilots, or AI decision support can create visible gains in speed, conversion, service, or margin.",
-    tagline: "ROI-focused roadmap",
+    title: "AI Automation & Workflow Modernization",
+    description:
+      "Automate tasks across tools like CRM, email, HRIS, ticketing, finance, and docs with approvals, audit logs, and human-in-the-loop controls.",
   },
   {
-    icon: "bot",
-    title: "Automate revenue and operations workflows",
-    copy: "Launch AI-driven workflows that improve lead handling, internal coordination, customer response, and recurring operational tasks.",
-    tagline: "Workflow deployment",
+    title: "Agentic AI Systems",
+    description:
+      "Multi-step agents that can plan, research, call tools, make decisions, and complete workflows safely and transparently.",
   },
   {
-    icon: "shield",
-    title: "Deploy with control, security, and accountability",
-    copy: "Put guardrails, review steps, permissions, and measurement in place so leadership can trust the rollout from day one.",
-    tagline: "Risk-managed delivery",
+    title: "AI-Powered GTM Acceleration",
+    description:
+      "ICP discovery, account research, personalized outreach, proposal creation, meeting intelligence, follow-ups, and pipeline hygiene.",
   },
   {
-    icon: "orbit",
-    title: "Scale what works after the first win",
-    copy: "Turn an initial launch into repeatable business value with adoption support, iteration plans, and a pipeline of next-step opportunities.",
-    tagline: "Expansion and adoption",
+    title: "Deep Research & Knowledge Systems",
+    description:
+      "Internal copilots that answer from your documents, policies, tickets, and past decisions while respecting access controls.",
+  },
+];
+
+export const prototypes = [
+  {
+    title: "AI SDR Automation",
+    description: "Account research, messaging, follow-ups, CRM updates",
+  },
+  {
+    title: "Email & Inbox Automation",
+    description: "Classify, respond, route, summarize, escalate",
+  },
+  {
+    title: "HR Automation",
+    description: "Resume screening, scheduling, onboarding",
+  },
+  {
+    title: "Document Classification",
+    description: "Invoices, contracts, KYC, policies",
+  },
+  {
+    title: "Support Triage Agent",
+    description: "Ticket tagging, suggested replies, routing",
+  },
+  {
+    title: "Finance Ops Assistant",
+    description: "Invoice matching, anomaly flags, collections",
+  },
+  {
+    title: "Meeting-to-Action Agent",
+    description: "Notes to tasks, follow-ups, tool updates",
+  },
+  {
+    title: "Compliance & Policy Copilot",
+    description: "Instant answers with citations",
+  },
+  {
+    title: "IT Ops Automation",
+    description: "Alert summarization, incident routing",
+  },
+];
+
+export const pricingPlans = [
+  {
+    name: "Discovery Sprint",
+    price: "Starting at $4,500",
+    description:
+      "A short engagement to map the workflow, define the AI opportunity, and outline the fastest path to an initial build.",
+    features: [
+      "Workflow and use-case diagnosis",
+      "Delivery plan and technical recommendation",
+      "Priority use-case shortlist",
+      "Executive summary with next-step options",
+    ],
+  },
+  {
+    name: "Prototype Delivery",
+    price: "Starting at $12,000",
+    description:
+      "A focused build for one high-value workflow or internal copilot, designed to move from concept to real usage quickly.",
+    features: [
+      "Scoped prototype or workflow build",
+      "Core automations and prompt logic",
+      "Human review and control points",
+      "Implementation handoff and rollout support",
+    ],
+  },
+  {
+    name: "Fractional AI Team",
+    price: "Custom monthly engagement",
+    description:
+      "An ongoing partnership for teams that want roadmap support, rapid iteration, and continued AI delivery across multiple workflows.",
+    features: [
+      "Strategic prioritization and sequencing",
+      "Recurring delivery and iteration capacity",
+      "Governance and rollout support",
+      "Cross-functional execution partnership",
+    ],
+  },
+];
+
+export const careerPrinciples = [
+  "Small team, high ownership",
+  "Work directly on real business problems",
+  "Build AI systems that have to survive in production",
+  "Operate with speed, clarity, and low ego",
+];
+
+export const openRoles = [
+  {
+    title: "AI Engineer",
+    description:
+      "Design and ship production-grade automations, agents, and workflow systems across a range of business use cases.",
+  },
+  {
+    title: "Applied AI Product Builder",
+    description:
+      "Bridge product thinking and implementation by turning fuzzy customer needs into clean, useful AI experiences.",
+  },
+  {
+    title: "Workflow Automation Specialist",
+    description:
+      "Own the orchestration layer across tools, APIs, prompts, and review flows that make AI useful inside the business.",
+  },
+];
+
+export const blogPosts = [
+  {
+    title: "Why most AI pilots never reach the workflow",
+    summary:
+      "A practical look at the delivery gap between a good demo and a system a real team can depend on.",
+  },
+  {
+    title: "What mid-sized teams should automate first",
+    summary:
+      "The highest-leverage AI starting points are usually repetitive, cross-functional, and easy to measure.",
+  },
+  {
+    title: "Designing human review into agentic systems",
+    summary:
+      "The right review layer makes AI more usable, more trusted, and safer to adopt across the business.",
+  },
+];
+
+export const solutions = services.map((service) => ({
+  eyebrow: "Service",
+  title: service.title,
+  description: service.description,
+  highlights: ["Production-minded delivery", "Workflow fit over novelty", "Built around measurable business value"],
+}));
+
+export const industries = [
+  {
+    kicker: "Revenue teams",
+    title: "Sales, marketing, and GTM",
+    description:
+      "Use AI to improve qualification, follow-up speed, messaging support, and the repetitive execution work that slows down commercial teams.",
+    examples: ["AI SDR automation", "Proposal support", "Research assistance", "Pipeline hygiene"],
+  },
+  {
+    kicker: "Operations",
+    title: "Internal workflow-heavy teams",
+    description:
+      "Reduce repetitive tasks, route work faster, and create better visibility across the internal processes that keep the business moving.",
+    examples: ["Inbox automation", "Operations copilots", "Document workflows", "Cross-tool orchestration"],
+  },
+  {
+    kicker: "Support and service",
+    title: "Customer-facing operational teams",
+    description:
+      "Improve response quality and speed with triage agents, suggested replies, knowledge access, and better escalation logic.",
+    examples: ["Support triage", "Knowledge systems", "Escalation routing", "Service summaries"],
+  },
+  {
+    kicker: "Compliance and control",
+    title: "High-trust environments",
+    description:
+      "Design AI systems with citations, review layers, permissions, and clear control points where the workflow demands more trust.",
+    examples: ["Policy copilot", "Audit-friendly workflows", "Human review", "Governed automation"],
+  },
+];
+
+export const principles = [
+  {
+    title: "Useful beats impressive",
+    description:
+      "We care more about a workflow that saves time, improves quality, or speeds up execution than a flashy demo that never leaves the workshop.",
+  },
+  {
+    title: "Business context comes first",
+    description:
+      "The best AI system is the one that fits the real tools, people, approvals, and constraints already present in the business.",
+  },
+  {
+    title: "Shipping matters",
+    description:
+      "We build for adoption and reliability, not just technical possibility, so the work can survive real usage after launch.",
   },
 ];
 
@@ -111,155 +266,31 @@ export const workloadFitOptions = [
       "More usable institutional knowledge",
     ],
   },
-  {
-    id: "product",
-    label: "Product owners",
-    kicker: "Productized AI experiences",
-    title: "Bring AI into the product without confusing users or adding risk.",
-    description:
-      "Shape features, evaluation, and delivery patterns so customer-facing AI feels useful, understandable, and commercially durable.",
-    outcomes: [
-      "Sharper product roadmap decisions",
-      "Faster learning from releases",
-      "Governed AI feature delivery",
-      "Better user adoption",
-    ],
-  },
-  {
-    id: "executive",
-    label: "Executive sponsors",
-    kicker: "Portfolio-level orchestration",
-    title: "Turn scattered AI efforts into a focused business program.",
-    description:
-      "Align leadership, business cases, and delivery sequencing so the company invests in the right use cases and knows how to scale them responsibly.",
-    outcomes: [
-      "Stronger investment prioritization",
-      "Better cross-team alignment",
-      "Clearer governance and ownership",
-      "Faster path from pilot to value",
-    ],
-  },
 ];
 
 export const processSteps = [
   {
-    title: "Pick the workflow that matters most",
-    copy: "We identify the business bottleneck, customer friction point, or manual process where AI can create visible improvement fast.",
+    title: "Find the workflow that matters most",
+    copy: "Identify the business process where AI can create visible improvement quickly.",
   },
   {
-    title: "Design the workflow around real operating needs",
-    copy: "Interfaces, automations, review points, and handoffs are designed together so the solution fits how your teams already work.",
+    title: "Design for the real operating environment",
+    copy: "Fit the automations, approvals, and handoffs to the tools and teams already in place.",
   },
   {
-    title: "Launch with measurement and controls in place",
-    copy: "We implement the workflow, rollout plan, and success metrics needed to deploy with confidence and learn quickly.",
+    title: "Launch and measure",
+    copy: "Deploy the workflow with clear ownership, controls, and success signals.",
   },
   {
-    title: "Expand the wins that prove ROI",
-    copy: "Once the first workflow performs, Xelera helps turn that result into a roadmap for broader revenue and operational impact.",
-  },
-];
-
-export const solutions = [
-  {
-    eyebrow: "Strategic advisory",
-    title: "AI roadmap tied to business ROI",
-    description:
-      "Define where AI should create measurable value first, what the highest-impact workflows are, and how to sequence delivery around real business goals.",
-    highlights: [
-      "Executive alignment around business outcomes",
-      "Use-case prioritization tied to ROI",
-      "Practical rollout recommendations",
-    ],
-  },
-  {
-    eyebrow: "Workflow delivery",
-    title: "AI automation for sales, service, and operations",
-    description:
-      "Deploy assistants, copilots, and workflow automation that reduce manual effort and improve responsiveness across customer and internal teams.",
-    highlights: [
-      "Workflow design tied to team adoption",
-      "Automation, prompting, and orchestration",
-      "Launch support from pilot to production",
-    ],
-  },
-  {
-    eyebrow: "Governance and measurement",
-    title: "AI controls, measurement, and rollout trust",
-    description:
-      "Create the guardrails, testing loops, and accountability structure needed to scale AI confidently inside a growing business.",
-    highlights: [
-      "Review and approval checkpoints",
-      "Measurement plans for ROI and adoption",
-      "Governance patterns that fit the company",
-    ],
-  },
-  {
-    eyebrow: "Scale",
-    title: "Adoption support and next-phase expansion",
-    description:
-      "Convert a strong first launch into a durable capability with enablement, iteration, and a path toward broader business value.",
-    highlights: [
-      "Post-launch optimization",
-      "Team enablement and adoption support",
-      "Roadmapping for the next ROI-driven use case",
-    ],
-  },
-];
-
-export const industries = [
-  {
-    kicker: "Commercial teams",
-    title: "Growth, sales, and customer experience",
-    description:
-      "When revenue teams need better qualification, faster follow-up, and more responsive buyer journeys, Xelera shapes the workflow around speed and measurable impact.",
-    examples: ["Lead qualification", "Proposal assistance", "Knowledge capture", "Response acceleration"],
-  },
-  {
-    kicker: "Operations",
-    title: "Workflow-heavy internal functions",
-    description:
-      "Operations teams often have clear bottlenecks but fragmented systems. Xelera uses AI to reduce coordination overhead, speed up execution, and improve consistency.",
-    examples: ["Internal copilots", "Policy guidance", "Operational triage", "Knowledge routing"],
-  },
-  {
-    kicker: "Product and platform",
-    title: "Digital products with AI features",
-    description:
-      "For product teams embedding AI into the customer experience, we help balance capability, usability, evaluation, and commercial discipline.",
-    examples: ["Embedded assistants", "Feature prototyping", "Release evaluation", "Governed rollout"],
-  },
-  {
-    kicker: "Regulated and high-trust environments",
-    title: "Organizations where risk and clarity matter",
-    description:
-      "In high-trust settings, AI needs stronger review layers, clearer ownership, and tighter operating controls. That gets built into the delivery path from the start.",
-    examples: ["Human review points", "Decision logging", "Guardrail design", "Escalation flows"],
-  },
-];
-
-export const principles = [
-  {
-    title: "Business-first AI",
-    description:
-      "The point is not to deploy AI for its own sake. The point is to improve a real commercial or operational outcome that matters to the business.",
-  },
-  {
-    title: "Systems, not demos",
-    description:
-      "We design the interfaces, workflows, controls, and measurement loops together so the result can survive outside a workshop or pilot.",
-  },
-  {
-    title: "Trust as a product feature",
-    description:
-      "Governance, review, and accountability are treated as part of the user experience because durable AI depends on trust as much as capability.",
+    title: "Expand what works",
+    copy: "Turn an early win into a broader AI roadmap across the business.",
   },
 ];
 
 export const contactInterestOptions = [
-  "AI strategy and roadmap",
-  "Agentic workflow design",
-  "Customer-facing AI product",
-  "Governance and evaluation",
+  "AI automation and workflow modernization",
+  "Agentic AI systems",
+  "AI-powered GTM acceleration",
+  "Deep research and knowledge systems",
   "General inquiry",
 ];

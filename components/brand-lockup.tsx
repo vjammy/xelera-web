@@ -35,7 +35,9 @@ export function BrandLockup({
           Xelera.ai
         </div>
         {!compact ? (
-          <div className={`-mt-0.5 text-sm ${inverted ? "text-slate-300" : "text-slate-600"}`}>
+          <div
+            className={`-mt-0.5 whitespace-nowrap text-[0.95rem] ${inverted ? "text-slate-300" : "text-slate-600"}`}
+          >
             AI systems for growth and operational clarity
           </div>
         ) : null}

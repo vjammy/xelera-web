@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { trackEvent } from "@/lib/analytics";
-import { navigationLinks, siteConfig } from "@/lib/site-content";
+import { navigationLinks } from "@/lib/site-content";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,17 +28,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="button-secondary"
+          <Link
+            href="/contact"
+            className="button-primary"
             onClick={() => trackEvent("booking_click", { location: "header" })}
           >
-            Book a 30-minute AI workflow review
-          </a>
-          <Link href="/contact" className="button-primary">
-            Request a Demo
+            Book a Discovery Call
           </Link>
         </div>
 
@@ -66,20 +61,15 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="mt-3 flex flex-col gap-3">
-              <a
-                href={siteConfig.bookingUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="button-secondary"
+              <Link
+                href="/contact"
+                className="button-primary"
                 onClick={() => {
                   setIsOpen(false);
                   trackEvent("booking_click", { location: "mobile_header" });
                 }}
               >
-                Book a 30-minute AI workflow review
-              </a>
-              <Link href="/contact" className="button-primary" onClick={() => setIsOpen(false)}>
-                Request a Demo
+                Book a Discovery Call
               </Link>
             </div>
           </div>

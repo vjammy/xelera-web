@@ -52,6 +52,37 @@ button {
   position: relative;
 }
 
+.hero-card {
+  position: relative;
+  min-height: 76vh;
+  background:
+    linear-gradient(90deg, rgba(9, 18, 37, 0.92), rgba(9, 18, 37, 0.72)),
+    radial-gradient(circle at 78% 28%, rgba(92, 132, 255, 0.22), transparent 20%),
+    linear-gradient(180deg, #173465, #102749);
+  box-shadow: 0 42px 100px -64px rgba(16, 39, 73, 0.75);
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 82% 28%, rgba(160, 208, 255, 0.18), transparent 22%),
+    radial-gradient(circle at 64% 66%, rgba(79, 124, 255, 0.18), transparent 20%),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, auto, 96px 96px, 96px 96px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  min-height: inherit;
+  align-items: center;
+}
+
 .grid-pattern {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
@@ -124,6 +155,25 @@ button {
 
 .button-secondary:hover {
   background: rgba(238, 243, 251, 1);
+}
+
+.hero-outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 1.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.hero-outline-button:hover {
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .input-shell {

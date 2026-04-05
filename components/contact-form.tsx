@@ -180,7 +180,7 @@ export function ContactForm() {
             disabled={submitDisabled || isPending}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#4f7cff,#2f5cff)] px-6 py-3.5 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isPending ? "Sending..." : "Request a Demo"}
+            {isPending ? "Sending..." : "Book a Discovery Call"}
             <ArrowRight className="h-4 w-4" />
           </button>
           <p className="text-sm leading-6 text-slate-500">
@@ -210,7 +210,7 @@ export function ContactForm() {
                   className="mt-2 inline-flex items-center gap-2 font-semibold text-[var(--color-accent-strong)]"
                   onClick={() => trackEvent("booking_click", { location: "contact_form_success" })}
                 >
-                  Book a 30-minute AI workflow review
+                  Book a Discovery Call
                   <ArrowRight className="h-4 w-4" />
                 </a>
               ) : (

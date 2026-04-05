@@ -9,22 +9,34 @@ export function SiteFooter() {
         <div className="max-w-xl">
           <BrandLockup compact />
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            AI systems for teams that need clearer decisions, stronger delivery, and practical
-            progress on the workflows they want to modernize next.
+            AI systems that help teams automate work, accelerate GTM, and deploy useful workflows
+            without unnecessary complexity.
           </p>
         </div>
         <div className="flex flex-wrap gap-4 text-sm text-slate-500">
-          <Link href="/solutions" className="transition-colors hover:text-slate-950">
-            Solutions
+          <Link href="/" className="transition-colors hover:text-slate-950">
+            Home
           </Link>
-          <Link href="/industries" className="transition-colors hover:text-slate-950">
-            Industries
+          <Link href="/prototypes" className="transition-colors hover:text-slate-950">
+            Prototypes
           </Link>
-          <Link href="/about" className="transition-colors hover:text-slate-950">
-            About
+          <Link href="/pricing" className="transition-colors hover:text-slate-950">
+            Pricing
+          </Link>
+          <Link href="/careers" className="transition-colors hover:text-slate-950">
+            Careers
           </Link>
           <Link href="/contact" className="transition-colors hover:text-slate-950">
             Contact
+          </Link>
+          <Link href="/blog" className="transition-colors hover:text-slate-950">
+            Blog
+          </Link>
+          <Link href="/terms" className="transition-colors hover:text-slate-950">
+            Terms
+          </Link>
+          <Link href="/privacy" className="transition-colors hover:text-slate-950">
+            Privacy
           </Link>
           <a
             href={siteConfig.bookingUrl}
@@ -32,7 +44,7 @@ export function SiteFooter() {
             rel="noreferrer"
             className="transition-colors hover:text-slate-950"
           >
-            Book a 30-minute AI workflow review
+            Book a Discovery Call
           </a>
         </div>
       </div>
