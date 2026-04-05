@@ -60,42 +60,68 @@ export const services = [
   },
 ];
 
-export const prototypes = [
+export type PrototypeShowcase = {
+  name: string;
+  summary: string;
+  launchUrl?: string;
+  status: string;
+  audience: string;
+  trustNote: string;
+  workflowSteps: string[];
+  opsFeatures: string[];
+  disclaimer?: string;
+  launchCta?: string;
+  secondaryCta?: string;
+  upcoming?: boolean;
+};
+
+export const prototypeShowcases: PrototypeShowcase[] = [
   {
-    title: "AI SDR Automation",
-    description: "Account research, messaging, follow-ups, CRM updates",
+    name: "Xelera SDR Sales Module",
+    summary:
+      "A working SDR workflow for event and conference lead intake, account research, outbound drafting, and approval-driven follow-up.",
+    launchUrl: "https://sdr.xelera.ai/login",
+    status: "Working Prototype",
+    audience: "Built for sales leaders, SDR managers, and revenue teams running event-driven outbound motion.",
+    trustNote:
+      "Human review stays in the loop before approval so teams can move faster without giving up control.",
+    workflowSteps: [
+      "Upload conference or event leads through CSV or XLSX intake.",
+      "Assign each list to a salesperson before research and follow-up begin.",
+      "Research and enrich accounts so reps have better context before outreach.",
+      "Generate outbound draft sequences for human review instead of sending automatically.",
+      "Let reps review lead-by-lead and prepare sequences for manager approval.",
+      "Allow managers to bulk approve only the leads that are already review-ready.",
+    ],
+    opsFeatures: [
+      "Lead upload and list operations",
+      "User onboarding and access management",
+      "Digest operations and send operations",
+      "Setup, product configuration, and admin controls",
+    ],
+    disclaimer: "This is a working pilot. Demo access details are available on the prototype login page.",
+    launchCta: "Launch Prototype",
+    secondaryCta: "Book a Discovery Call",
   },
   {
-    title: "Email & Inbox Automation",
-    description: "Classify, respond, route, summarize, escalate",
+    name: "Inbox Automation Console",
+    summary: "Classify, route, summarize, and escalate inbound email with explicit review layers.",
+    status: "Upcoming",
+    audience: "For ops and support teams handling high-volume shared inbox workflows.",
+    trustNote: "Designed as a future internal prototype.",
+    workflowSteps: ["Intake", "Classify", "Route", "Review"],
+    opsFeatures: ["Shared mailbox triage"],
+    upcoming: true,
   },
   {
-    title: "HR Automation",
-    description: "Resume screening, scheduling, onboarding",
-  },
-  {
-    title: "Document Classification",
-    description: "Invoices, contracts, KYC, policies",
-  },
-  {
-    title: "Support Triage Agent",
-    description: "Ticket tagging, suggested replies, routing",
-  },
-  {
-    title: "Finance Ops Assistant",
-    description: "Invoice matching, anomaly flags, collections",
-  },
-  {
-    title: "Meeting-to-Action Agent",
-    description: "Notes to tasks, follow-ups, tool updates",
-  },
-  {
-    title: "Compliance & Policy Copilot",
-    description: "Instant answers with citations",
-  },
-  {
-    title: "IT Ops Automation",
-    description: "Alert summarization, incident routing",
+    name: "Knowledge Workflow Copilot",
+    summary: "Assist teams with governed document answers, citations, and workflow handoffs.",
+    status: "Upcoming",
+    audience: "For internal operations teams working across documents and approvals.",
+    trustNote: "Designed as a future internal prototype.",
+    workflowSteps: ["Search", "Draft", "Review", "Approve"],
+    opsFeatures: ["Knowledge retrieval with citations"],
+    upcoming: true,
   },
 ];
 

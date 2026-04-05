@@ -3,7 +3,7 @@ import { ArrowRight, Bot, BriefcaseBusiness, ShieldCheck, Zap } from "lucide-rea
 import { FadeIn } from "@/components/fade-in";
 import {
   heroHighlights,
-  prototypes,
+  prototypeShowcases,
   roiStats,
   services,
   siteConfig,
@@ -130,10 +130,10 @@ export default function Home() {
           </p>
         </FadeIn>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {prototypes.map((prototype, index) => (
-            <FadeIn key={prototype.title} delay={index * 0.03} className="white-panel rounded-[1.4rem] p-5">
-              <h3 className="text-lg font-medium text-slate-950">{prototype.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{prototype.description}</p>
+          {prototypeShowcases.map((prototype, index) => (
+            <FadeIn key={prototype.name} delay={index * 0.03} className="white-panel rounded-[1.4rem] p-5">
+              <h3 className="text-lg font-medium text-slate-950">{prototype.name}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{prototype.summary}</p>
             </FadeIn>
           ))}
         </div>
